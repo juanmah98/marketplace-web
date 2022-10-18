@@ -2,6 +2,12 @@
     --main-color: #4B4C80;
     --secondary-color: #c3dbcf;
 }
+
+.bg-header{
+  background-color: rgba(47, 47, 47, 0.453);
+}
+
+
 /* @font-face {
     font-family: 'Biger';
     src: url("../../../../assets/fonts/bBigerOver.ttf");
@@ -108,6 +114,14 @@ div .img-logo{
  
 } */
 
+.isFalse{
+  color: white;
+}
+
+.isTrue{
+  color: rgb(116, 200, 255);
+}
+
 
 
 @media (max-width: 500px) { 
@@ -198,10 +212,3 @@ div .img-logo{
   }
 }
 
-.isTrue{
-  color: rgb(255, 255, 255);
-}
-
-.isFalse{
-  color: rgb(178, 178, 178);
-}
