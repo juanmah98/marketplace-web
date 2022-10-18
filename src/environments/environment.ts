@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+
+   firebaseConfig : {
+    apiKey: "AIzaSyCr-Abi8ifk1n8xkuGkLiE_brzrP39wVVY",
+    authDomain: "flowkai.firebaseapp.com",
+    projectId: "flowkai",
+    storageBucket: "flowkai.appspot.com",
+    messagingSenderId: "88172226593",
+    appId: "1:88172226593:web:01d17c2339cb7f7a3adb60",
+    measurementId: "G-NQKVT23Y80"
+  }
 };
 
 /*
