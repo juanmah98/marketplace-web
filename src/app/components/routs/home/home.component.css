@@ -1,3 +1,4 @@
+/* Color de fondo e imagenes */
 .bg-home{
     background-color: #000000;
       background-image:  linear-gradient(rgba(6, 7, 28, 0.514), rgba(20, 20, 20, 0.558), rgba(8, 8, 8, 0.6)), url("../../../../assets/Imagenes/Fondos/home.jpg");
@@ -15,12 +16,13 @@
    
     background-color: rgb(0, 29, 32);
     position: relative;
+    background-attachment: fixed;
    
-    height: 50vh;
+  
 }
 
 .bg-home3A{
-    background-color: rgb(118, 200, 255);
+    background-color: rgb(255, 255, 255);
     /* background-image:   url("../../../../assets/Imagenes/Fondos/principal.PNG"); */
     /* background-image: url("../img/fodno4.jpg"); */
     background-size: cover;
@@ -29,6 +31,20 @@
     background-repeat: no-repeat;
     width: 100%;
 }
+
+.curved {
+  position: relative;
+  background: rgb(0, 183, 255);
+  height: 30vh;
+  border-bottom-left-radius: 50% 100%;
+  border-bottom-right-radius: 50% 100%;
+}
+
+.bg-recuadro{
+ background-color: rgb(238, 251, 255);
+ border-radius: 10px;
+}
+
 
 /* .bg-home3{
     background-color: rgb(32, 151, 255);
@@ -39,8 +55,6 @@
   background-attachment: fixed;
 } */
 
-
-  
   .bg-home2::after {
     content: '';
     position: absolute;
@@ -55,10 +69,33 @@
     background-position: 0 0;
   }
 
+  /* -----------------------------------------------------*/
+
+  /* Imagenes */
+
   .img-home{
     margin-top: 150px;
     margin-left: 30px;
   }
+
+  .carrito{
+    background-size: cover;
+      background-attachment: fixed;
+     width: 80px;
+  }
+
+  .data{
+    width: 40%;
+  }
+
+  /* -----------------------------------------------------*/
+
+  /* Size text */
+  .titel{
+    font-size: 80px;
+  }
+
+  /* ---------------------------------------------------- */
 
 
   /* Efecto */

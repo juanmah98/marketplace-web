@@ -4,7 +4,7 @@
 }
 
 .bg-header{
-  background-color: rgba(47, 47, 47, 0.453);
+  background-color: rgba(255, 255, 255, 0.958);
 }
 
 
@@ -115,11 +115,11 @@ div .img-logo{
 } */
 
 .isFalse{
-  color: white;
+  color: rgb(104, 104, 104);
 }
 
 .isTrue{
-  color: rgb(116, 200, 255);
+  color: rgb(0, 183, 255);
 }
 
 

@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+/* Fonts */
+
+@font-face {
+    font-family: 'Bebas';
+    src: url("./assets/Fonts/BebasNeue-Regular.otf");
+}
+
+@font-face {
+    font-family: 'Easport';
+    src: url("./assets/Fonts/EASPORTS15.ttf");
+}
+
+@font-face {
+    font-family: 'TOMMYBold';
+    src: url("./assets/Fonts/TOMMYBold.otf");
+}
+
+@font-face {
+    font-family: 'TOMMYBlack';
+    src: url("./assets/Fonts/TOMMYBlack.otf");
+}
+
+@font-face {
+    font-family: 'Patron';
+    src: url("./assets/Fonts/Patron.otf");
+}
+
+@font-face {
+    font-family: 'Quantum';
+    src: url("./assets/Fonts/Quantum.otf");
+}
+
+/* --------------------------- */
