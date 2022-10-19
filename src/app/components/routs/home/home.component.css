@@ -69,6 +69,24 @@
     background-position: 0 0;
   }
 
+  .triangle {
+    position: relative;
+    background: #ffffff;    
+  }
+  
+  .triangle::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 52px 52px 0 52px;
+    border-color: #ffffff transparent transparent transparent;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+  }
+
   /* -----------------------------------------------------*/
 
   /* Imagenes */
@@ -88,11 +106,16 @@
     width: 40%;
   }
 
+
   /* -----------------------------------------------------*/
 
-  /* Size text */
+  /* Text style*/
   .titel{
     font-size: 80px;
+  }
+
+  .app{
+    color: rgb(0, 183, 255);
   }
 
   /* ---------------------------------------------------- */
