@@ -1,0 +1,23 @@
+.space{
+    padding-top: 100px;
+    padding-bottom: 10%;
+   
+}
+
+.bg-login{
+    background-color: rgb(0, 183, 255);
+    border-radius: 10px;
+}
+
+.pass{
+    padding-right: 7px;
+}
+
+.login{
+    font-family: Patron;
+    color: white;
+}
+
+.social{
+    font-size: 15px;
+}
