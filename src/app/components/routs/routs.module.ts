@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -15,7 +16,8 @@ import { LoginComponent } from './login/login.component';
   imports: [
     CommonModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ]
 })
 export class RoutsModule { }

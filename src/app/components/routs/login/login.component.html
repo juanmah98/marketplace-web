@@ -4,7 +4,13 @@
 
         <div class="col-4 ">
 
-            <div class="bg-login pt-3 pb-4 shadow">
+            <div>
+                <app-logi *ngIf="message == true" (messageEvent)="receiveMessage($event)"></app-logi>
+            </div>
+            <div *ngIf="message == false">
+                <app-sing></app-sing>
+            </div>
+            <!-- <div class="bg-login pt-3 pb-4 shadow">
 
                 <img  width="15%" src="../../../../assets/Imagenes/Logos/user.png"/>
                  <p class="fs-2 login">Login</p>
@@ -43,7 +49,9 @@
                
                 
               
-            </div>
+            </div> -->
+
+
 
         </div>
 

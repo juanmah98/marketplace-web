@@ -17,18 +17,18 @@
                     
                     <ul class="nav">
                         <li class="nav-item">
-                            <a href="" rel="noopener noreferrer" class="isTrue nav-item text-decoration-none fs-6 p-2 m-1" routerLink="" style="font-family: Patron;">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none fs-6 p-2 m-1" [ngClass]="state1 == true ? 'isTrue' : 'isFalse' "  (click)="setState1()"  routerLink="" style="font-family: Patron;">
                                 Home
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" rel="noopener noreferrer" class="isFalse nav-item text-decoration-none  fs-6 p-2 m-1" routerLink="/portfolio" style="font-family: Patron;">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-6 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/portfolio" style="font-family: Patron;">
                                 Contact
                             </a>
                         </li>
                         
                         <li class="nav-item">
-                            <a href="" rel="noopener noreferrer" class="isFalse nav-item text-decoration-none fs-6 p-2 m-1" routerLink="/login" style="font-family: Patron;" >
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none fs-6 p-2 m-1" [ngClass]="state3 == true ? 'isTrue' : 'isFalse' " (click)="setState3()"  routerLink="/login" style="font-family: Patron;" >
                                 Login
                             </a>
                         </li>
