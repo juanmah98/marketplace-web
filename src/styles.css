@@ -1,3 +1,63 @@
+
+/* Colors */
+:root{
+
+   /* 
+   // COLOR BLUE & WHITE //
+    --primary: rgb(0, 183, 255);
+    --secondary: rgb(255, 255, 255);
+
+    --background-color-1: rgb(255, 255, 255);
+    --background-color-2: rgb(0, 29, 32);
+    --background-color-3: rgb(0, 183, 255);
+
+    --header-active: rgb(0, 183, 255);
+    --header-inactive: rgb(104, 104, 104); */
+
+
+     /* // COLOR GREY & DARK // */
+   /*  --primary:  rgb(0, 183, 255); 
+    --secondary: #212529; 
+
+    --background-color-1: #343A40; 
+    --background-color-2: #6C757D;
+    --background-color-3: #495057; 
+
+    --header-active: rgb(0, 183, 255);
+    --header-inactive: #E9ECEF; 
+
+    --nav: #212529; 
+    --footer: rgb(0, 183, 255);
+
+    --primary-text: #E9ECEF; 
+
+    --text-light: #E9ECEF; 
+    --text-dark: #212529;  */
+
+
+    /* // COLOR GREY// */
+    --primary:  #121212;  
+    --secondary: rgb(0, 183, 255);
+
+    --background-color-1: #090909; 
+    --background-color-2: #131313;
+    --background-color-3: #090909; 
+    --background-color-login: #090909;
+
+    --header-active: rgb(0, 183, 255);
+    --header-inactive: #E9ECEF; 
+
+    --nav: #121212; 
+    --footer: #181818;
+
+    --primary-text: #E9ECEF; 
+
+    --text-light: #E9ECEF; 
+    --text-dark: #212529; 
+ 
+}
+/* ---------------------------- */
+
 /* Fonts */
 
 @font-face {

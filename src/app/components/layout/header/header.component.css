@@ -1,55 +1,17 @@
-:root {
-    --main-color: #4B4C80;
-    --secondary-color: #c3dbcf;
+.bg-movido{
+  background-image: url("../../../../assets/Imagenes/Fondos/giphy.gif");
+    background-size:auto;
+    background-position: center;
 }
 
 .bg-header{
-  background-color: rgba(255, 255, 255, 0.958);
+  background-color: var(--nav);
 }
-
-
-/* @font-face {
-    font-family: 'Biger';
-    src: url("../../../../assets/fonts/bBigerOver.ttf");
-}
-@font-face {
-  font-family: 'FutureEarth';
-  src: url("../../../../assets/fonts/FutureEarth.ttf");
-}
-
-@font-face {
-  font-family: 'Moderna';
-  src: url("../../../../assets/fonts/MomcakeBold-WyonA.otf");
-} */
-
-
-/* .bg-movido{
-  background-image: url("../../../../assets/img/optimizadas/fondomovido.gif");
-    background-size:auto;
-    background-position: center;
-} */
 
 .fs-6{
   font-size: small;
 }
 
-
-.p{
-  background-color: rgba(63, 63, 63, 0.178);
-  padding: 5%;
-}
-
-.bg1 {
-    background-color: var(--main-color);
-}
-
-.bg2 {
-    background-color: var(--secondary-color);
-}
-
-.white {
-    color: white;
-}
 .card-container {
   perspective: 50%;
 }
@@ -115,11 +77,11 @@ div .img-logo{
 } */
 
 .isFalse{
-  color: rgb(104, 104, 104);
+  color: var(--header-inactive);
 }
 
 .isTrue{
-  color: rgb(0, 183, 255);
+  color: var(--header-active);
 }
 
 
