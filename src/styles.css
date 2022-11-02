@@ -54,8 +54,30 @@
 
     --text-light: #E9ECEF; 
     --text-dark: #212529; 
+
+      /* // COLOR GREY// */
+      --primary:  #121212;  
+      --secondary: #23A6F0;
+  
+      --background-color-1: #252b42;
+      --background-color-2: #131313;
+      --background-color-3: #090909; 
+      --background-color-login: #090909;
+  
+      --header-active: rgb(0, 183, 255);
+      --header-inactive: #E9ECEF; 
+  
+      --nav: #252b42;
+      --footer: #181818;
+  
+      --primary-text: #E9ECEF; 
+  
+      --text-light: #E9ECEF; 
+      --text-dark: #212529; 
  
 }
+
+
 /* ---------------------------- */
 
 /* Fonts */

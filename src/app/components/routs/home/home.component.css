@@ -133,6 +133,12 @@
     width: 40%;
   }
 
+  .transp{
+    background-color: var(--background-color-1);
+    border-color: var(--secondary);
+    color: var(--secondary);
+  }
+
 
   /* -----------------------------------------------------*/
 
@@ -144,6 +150,11 @@
   .app{
     color: var(--primary);
   }
+
+  .fs-7{
+    font-size: 14px;
+  }
+
 
   /* ---------------------------------------------------- */
 

@@ -4,12 +4,12 @@
     <header>
        
         
-        <nav class="navbar bg-movido fixed-top d-none d-md-block">
+        <nav class="navbar bg-header fixed-top d-none d-xl-block">
             <div class="container-fluid " >
                 
                 <div class=" d-flex">
                     <a href="" class="text-decoration-none px-2 text-white m-auto fs-1" >
-                        <img src="../../../../assets/Imagenes/Logos/FlowkaiLight.png" class="img-fluid " style="width: 220px;" alt="">
+                        <img src="../../../../assets/Imagenes/Logos/FlowKdark.png" class="img-fluid " style="width: 220px;" alt="">
                         <!-- &nbsp;lowkai -->
                     </a>                    
                 </div> 
@@ -17,19 +17,43 @@
                     
                     <ul class="nav">
                         <li class="nav-item">
-                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none fs-6 p-2 m-1" [ngClass]="state1 == true ? 'isTrue' : 'isFalse' "  (click)="setState1()"  routerLink="" style="font-family: Patron;">
-                                Home
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none fs-7 p-2 m-1" [ngClass]="state1 == true ? 'isTrue' : 'isFalse' "  (click)="setState1()"  routerLink="" style="font-family: Patron;">
+                               Products
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-6 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/portfolio" style="font-family: Patron;">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/portfolio" style="font-family: Patron;">
+                                Resources
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/portfolio" style="font-family: Patron;">
+                                Concept
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/portfolio" style="font-family: Patron;">
                                 Contact
                             </a>
                         </li>
-                        
+
                         <li class="nav-item">
-                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none fs-6 p-2 m-1" [ngClass]="state3 == true ? 'isTrue' : 'isFalse' " (click)="setState3()"  routerLink="/login" style="font-family: Patron;" >
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/portfolio" style="font-family: Patron;">
+                                Team
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item" style="margin-left: 30px;">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none fs-7 p-2 m-1" [ngClass]="state3 == true ? 'isTrue' : 'isFalse' " (click)="setState3()"  routerLink="/login" style="font-family: Patron;" >
                                 Login
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/portfolio" style="font-family: Patron;">
+                                <Button class="btn btn-data fs-7">Join us</Button>
                             </a>
                         </li>
     
@@ -41,15 +65,84 @@
    
     
     
-    <div class="d-md-none">
-      <nav class=" navbar navbar bg-header">
+        <div class="d-xl-none">
+            <nav class=" navbar navbar-dark bg-header">
+                <div class="container-fluid d-flex">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                        <span class="navbar-toggler-icon"></span>                        
+                    </button>
+                    <a href="" class="text-decoration-none px-2 text-white m-auto fs-1" >
+                        <img src="../../../../assets/Imagenes/Logos/FlowKdark.png" class="img-fluid " style="width: 130px;" alt="">
+                        <!-- &nbsp;lowkai -->
+                    </a>        
+                </div>
+            </nav>
+        </div>
+    
+      <div class="offcanvas offcanvas-start text-light bg-header" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h3 class="offcanvas-title" id="offcanvasExampleLabel" style="font-family: Patron;">FlouKai</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column" >
+                <li class="nav-item" >
+                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6 " routerLink="" style="font-family: Patron;">
+                        Products
+                    </a>
+                </li>
+                <li class="nav-item pt-2">
+                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6 "  routerLink="/portfolio" style="font-family: Patron;">
+                        Resources
+                    </a>
+                </li>
+    
+                <li class="nav-item  pt-2">
+                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6   "  routerLink="/portfolio" style="font-family: Patron;">
+                        Concept
+                    </a>
+                </li>
+    
+                <li class="nav-item  pt-2">
+                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6 "  routerLink="/portfolio" style="font-family: Patron;">
+                        Contact
+                    </a>
+                </li>
+    
+                <li class="nav-item  pt-2">
+                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6  "  routerLink="/portfolio" style="font-family: Patron;">
+                        Team
+                    </a>
+                </li>
+                
+                <li class="nav-item pt-4" >
+                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none  isFalse fs-6  " routerLink="/login" style="font-family: Patron;">
+                        Login
+                    </a>
+                </li>
+                
+                <li class="nav-item pt-2">
+                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6  "  routerLink="/portfolio" style="font-family: Patron;">
+                        <Button class="btn btn-data fs-6 ">Join us</Button>
+                    </a>
+                </li>
+                
+              
+            </ul>
+                
+        </div>
+      </div>
+     
+
+    <!-- <div class="d-xl-none">
+      <nav class=" navbar navbar-dark bg-header">
         <div class="container-fluid d-flex">
-          <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>                        
           </button>
           <a href="" class="text-decoration-none px-2 text-white m-auto fs-1" >
             <img src="../../../../assets/Imagenes/Logos/FlowkaiLight.png" class="img-fluid " style="width: 130px;" alt="">
-            <!-- &nbsp;lowkai -->
+          
         </a>        
         </div>
       </nav>
@@ -60,21 +153,46 @@
             <div class="col-7">               
           <ul class="nav flex-column" >
             <li class="nav-item" >
-                <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6 p-1 m-1 " routerLink="" style="font-family: Patron;">
-                    Home
+                <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-7 p-1 m-1 " routerLink="" style="font-family: Patron;">
+                    Products
                 </a>
             </li>
             <li class="nav-item">
-                <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6 p-1 m-1  "  routerLink="/portfolio" style="font-family: Patron;">
-                    Suport
+                <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-7 p-1 m-1  "  routerLink="/portfolio" style="font-family: Patron;">
+                    Resources
                 </a>
             </li>
-           
+
             <li class="nav-item">
-                <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none  isFalse fs-6 p-1 m-1 " routerLink="/login" style="font-family: Patron;">
+                <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-7 p-1 m-1  "  routerLink="/portfolio" style="font-family: Patron;">
+                    Concept
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-7 p-1 m-1  "  routerLink="/portfolio" style="font-family: Patron;">
+                    Contact
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-7 p-1 m-1  "  routerLink="/portfolio" style="font-family: Patron;">
+                    Team
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none  isFalse fs-7 p-1 m-1 " routerLink="/login" style="font-family: Patron;">
                     Login
                 </a>
             </li>
+            
+            <li class="nav-item">
+                <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-7 p-1 m-1  "  routerLink="/portfolio" style="font-family: Patron;">
+                    <Button class="btn btn-data fs-7">Join us</Button>
+                </a>
+            </li>
+            
           
         </ul>
             </div>
@@ -83,7 +201,7 @@
         </div>
         </div>
       </div>
-    </div>
+    </div> -->
     
     
     </header>

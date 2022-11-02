@@ -1,15 +1,25 @@
-.bg-movido{
+/* .bg-movido{
   background-image: url("../../../../assets/Imagenes/Fondos/giphy.gif");
     background-size:auto;
     background-position: center;
-}
+} */
 
 .bg-header{
-  background-color: var(--nav);
+  background-color: var(--background-color-1);
 }
 
-.fs-6{
-  font-size: small;
+.fs-7{
+  font-size: 12px;
+}
+
+.btn-data{
+  background-color: var(--secondary);
+  color: white;
+}
+
+.btn-data:hover{
+  background-color: #126ea3;
+  color: white;
 }
 
 .card-container {
