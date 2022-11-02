@@ -139,6 +139,13 @@
     color: var(--secondary);
   }
 
+  .blue{
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    color: white;
+  }
+
+
 
   /* -----------------------------------------------------*/
 
