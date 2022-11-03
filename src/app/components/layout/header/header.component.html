@@ -1,7 +1,7 @@
 <body>
     
 
-    <header>
+    <header *ngIf="sesion != true ">
        
         
         <nav class="navbar bg-header fixed-top d-none d-xl-block">
@@ -22,25 +22,25 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/portfolio" style="font-family: Patron;">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/home" style="font-family: Patron;">
                                 Resources
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/portfolio" style="font-family: Patron;">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/home" style="font-family: Patron;">
                                 Concept
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/portfolio" style="font-family: Patron;">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/home" style="font-family: Patron;">
                                 Contact
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/portfolio" style="font-family: Patron;">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/home" style="font-family: Patron;">
                                 Team
                             </a>
                         </li>
@@ -52,7 +52,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/portfolio" style="font-family: Patron;">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/home" style="font-family: Patron;">
                                 <Button class="btn btn-data fs-7">Join us</Button>
                             </a>
                         </li>
@@ -95,25 +95,25 @@
                     </a>
                 </li>
                 <li class="nav-item pt-2">
-                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6 " data-bs-dismiss="offcanvas" aria-label="Close"  routerLink="/portfolio" style="font-family: Patron;">
+                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6 " data-bs-dismiss="offcanvas" aria-label="Close"  routerLink="/home" style="font-family: Patron;">
                         Resources
                     </a>
                 </li>
     
                 <li class="nav-item  pt-2">
-                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6   " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/portfolio" style="font-family: Patron;">
+                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6   " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/home" style="font-family: Patron;">
                         Concept
                     </a>
                 </li>
     
                 <li class="nav-item  pt-2">
-                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6 " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/portfolio" style="font-family: Patron;">
+                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6 " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/home" style="font-family: Patron;">
                         Contact
                     </a>
                 </li>
     
                 <li class="nav-item  pt-2">
-                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6  " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/portfolio" style="font-family: Patron;">
+                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6  " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/home" style="font-family: Patron;">
                         Team
                     </a>
                 </li>
@@ -125,7 +125,7 @@
                 </li>
                 
                 <li class="nav-item pt-2">
-                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6  " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/portfolio" style="font-family: Patron;">
+                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6  " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/home" style="font-family: Patron;">
                         <Button class="btn btn-data fs-6 ">Join us</Button>
                     </a>
                 </li>
@@ -161,25 +161,25 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-7 p-1 m-1  "  routerLink="/portfolio" style="font-family: Patron;">
+                <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-7 p-1 m-1  "  routerLink="/home" style="font-family: Patron;">
                     Resources
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-7 p-1 m-1  "  routerLink="/portfolio" style="font-family: Patron;">
+                <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-7 p-1 m-1  "  routerLink="/home" style="font-family: Patron;">
                     Concept
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-7 p-1 m-1  "  routerLink="/portfolio" style="font-family: Patron;">
+                <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-7 p-1 m-1  "  routerLink="/home" style="font-family: Patron;">
                     Contact
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-7 p-1 m-1  "  routerLink="/portfolio" style="font-family: Patron;">
+                <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-7 p-1 m-1  "  routerLink="/home" style="font-family: Patron;">
                     Team
                 </a>
             </li>
@@ -191,7 +191,7 @@
             </li>
             
             <li class="nav-item">
-                <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-7 p-1 m-1  "  routerLink="/portfolio" style="font-family: Patron;">
+                <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-7 p-1 m-1  "  routerLink="/home" style="font-family: Patron;">
                     <Button class="btn btn-data fs-7">Join us</Button>
                 </a>
             </li>
@@ -205,6 +205,148 @@
         </div>
       </div>
     </div> -->
+    
+    
+    </header>
+
+
+    <header *ngIf="sesion == true ">
+       
+        
+        <nav class="navbar bg-header fixed-top d-none d-xl-block">
+            <div class="container-fluid " >
+                
+                <div class=" d-flex">
+                    <a href="" class="text-decoration-none px-2 text-white m-auto fs-1" >
+                        <img src="../../../../assets/Imagenes/Logos/FlowKdark.png" class="img-fluid " style="width: 220px;" alt="">
+                        <!-- &nbsp;lowkai -->
+                    </a>                    
+                </div> 
+                <div class="navbar-content d-flex justify-content-end">
+                    
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none fs-7 p-2 m-1" [ngClass]="state1 == true ? 'isTrue' : 'isFalse' "  (click)="setState1()"  routerLink="" style="font-family: Patron;">
+                               Products
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/home" style="font-family: Patron;">
+                                Resources
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/home" style="font-family: Patron;">
+                                Concept
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/home" style="font-family: Patron;">
+                                Contact
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/home" style="font-family: Patron;">
+                                Team
+                            </a>
+                        </li>
+
+                        <li class="nav-item" style="margin-left: 30px;">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none fs-7 p-2 m-1"  (click)="setState3()"  routerLink="/login" style="font-family: Patron;"  [ngClass]="state2 == true ? 'isTrue' : 'isFalse' ">
+                               <img src="{{objetounico.picture}}" width="30" alt="" style="border-radius: 20px;"> {{objetounico.given_name}}
+                            </a>
+                        </li>    
+                        
+                        <li class="nav-item" style="margin-left: 30px;">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none fs-7 p-2 m-1" (click)="logout()"  routerLink="/home" style="font-family: Patron;"  [ngClass]="state2 == true ? 'isTrue' : 'isFalse' ">
+                                Logout
+                            </a>
+                        </li>                       
+    
+                       
+                    </ul>
+                </div>
+            </div>
+        </nav>
+   
+    
+    
+        <div class="d-xl-none">
+            <nav class=" navbar navbar-dark bg-header">
+                <div class="container-fluid">
+                    <div>
+                        <a href="" class=" text-decoration-none px-2 text-white m-auto fs-1" >
+                            <img src="../../../../assets/Imagenes/Logos/FlowKdark.png" class="img-fluid "  style="width: 130px;" alt="">
+                            <!-- &nbsp;lowkai -->
+                        </a>        
+
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                        <span class="navbar-toggler-icon"></span>                        
+                    </button>
+                </div>
+            </nav>
+        </div>
+    
+      <div class="offcanvas offcanvas-start text-light bg-header" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h3 class="offcanvas-title" id="offcanvasExampleLabel" style="font-family: Patron;" data-bs-dismiss="offcanvas" aria-label="Close">FlouKai</h3>
+          <button type="button" class="btn btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column" >
+                <li class="nav-item" >
+                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6 " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="" style="font-family: Patron;">
+                        Products
+                    </a>
+                </li>
+                <li class="nav-item pt-2">
+                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6 " data-bs-dismiss="offcanvas" aria-label="Close"  routerLink="/home" style="font-family: Patron;">
+                        Resources
+                    </a>
+                </li>
+    
+                <li class="nav-item  pt-2">
+                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6   " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/home" style="font-family: Patron;">
+                        Concept
+                    </a>
+                </li>
+    
+                <li class="nav-item  pt-2">
+                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6 " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/home" style="font-family: Patron;">
+                        Contact
+                    </a>
+                </li>
+    
+                <li class="nav-item  pt-2">
+                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6  " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/home" style="font-family: Patron;">
+                        Team
+                    </a>
+                </li>
+                
+                <li class="nav-item" style="margin-left: 30px;">
+                    <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none fs-7 p-2 m-1"   routerLink="/login" style="font-family: Patron;" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' ">
+                       <img src="{{objetounico.picture}}" width="30" alt="" style="border-radius: 20px;"> {{objetounico.given_name}}
+                    </a>
+                </li>    
+                
+                <li class="nav-item" style="margin-left: 30px;">
+                    <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none fs-7 p-2 m-1" (click)="logout()" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  routerLink="/home" style="font-family: Patron;" >
+                        Logout
+                    </a>
+                </li>    
+                
+              
+            </ul>
+                
+        </div>
+      </div>
+     
+
+
     
     
     </header>
