@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Answer } from 'src/app/interfaces/Answer';
 import { Question } from 'src/app/interfaces/Question';
 
 import { ValidateService } from 'src/app/services/validate.service';
@@ -11,6 +12,7 @@ import { ValidateService } from 'src/app/services/validate.service';
 export class AnswersComponent implements OnInit {
 
   question: Question[] = [];
+  answerss: Answer[]=[];
   constructor(private _AnswersService : ValidateService) { } 
 
   ngOnInit(): void {
@@ -37,22 +39,26 @@ export class AnswersComponent implements OnInit {
   }
 
   postAnswer(){
-   var answer = {
-      "userId":145,
-      "questionId":2,
-      "answer":{
-          "additionalComents": "",
-          "answerDescription": "please enter your answer",
-          "answerGroup": "user entry",
-          "answerGroupDisplay": "null",
-          "answerName": "user entry string",
-          "answerOptionId": 1,
-          "answerType": "user entry string",
-          "sysActive": 1
-      }
-  }
+   this.answerss = [
+    {
+        "userId":145,
+        "questionId":2,
+        "answer":{
+            "additionalComents": "",
+            "answerDescription": "please enter your answer",
+            "answerGroup": "user entry",
+            "answerGroupDisplay": "null",
+            "answerName": "user entry string",
+            "answerOptionId": 1,
+            "answerType": "user entry string",
+            "sysActive": 1
+        }
+    },
+   
+]
+  
 
-  this._AnswersService.postAnser(answer)
+  this._AnswersService.postAnser(this.answerss)
       .subscribe(data => {
         console.log(data)        
       })      

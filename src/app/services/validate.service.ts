@@ -18,10 +18,10 @@ export class ValidateService {
     return this.http.get<Question>(this.baseURL)    
   }
 
-  postAnser(answer:Answer): Observable<any>{   
+  postAnser(answer:Answer[]): Observable<any>{   
     const headers = { 'content-type': 'application/json'}  
     const body=JSON.stringify(answer);
     console.log(body);
-    return this.http.post(this.baseURL + 'answer', body,{'headers':headers});
+    return this.http.post(this.baseURL,body,{'headers':headers})
   }
 }
