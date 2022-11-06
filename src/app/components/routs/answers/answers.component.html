@@ -1,0 +1,15 @@
+<body style="background-color: var( --background-color-1);">
+    <div class="container-fluid pt-5">
+        <div class="row" >
+
+            <button class="btn btn-primary" (click)="postAnswer()">Post</button>
+            <div class="col-4  text-light" *ngFor="let question of question">
+                <div>
+
+                    <p>{{question.questionDescription}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+</body>

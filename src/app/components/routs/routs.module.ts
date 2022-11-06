@@ -5,13 +5,18 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { SharedModule } from '../shared/shared.module';
+import { AnswersComponent } from './answers/answers.component';
 
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    AnswersComponent
+  ],
+  exports:[
+    AnswersComponent
   ],
   imports: [
     CommonModule,
