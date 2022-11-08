@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { SharedModule } from '../shared/shared.module';
 import { AnswersComponent } from './answers/answers.component';
+import { GraphicComponent } from './graphic/graphic.component';
 
 
 
@@ -13,7 +14,8 @@ import { AnswersComponent } from './answers/answers.component';
   declarations: [
     HomeComponent,
     LoginComponent,
-    AnswersComponent
+    AnswersComponent,
+    GraphicComponent
   ],
   exports:[
     AnswersComponent

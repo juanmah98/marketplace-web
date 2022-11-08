@@ -41,7 +41,7 @@ export class AnswersComponent implements OnInit {
   postAnswer(){
    this.answerss = [
     {
-        "userId":145,
+        "userId":2,
         "questionId":2,
         "answer":{
             "additionalComents": "",
