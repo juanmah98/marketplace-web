@@ -7,6 +7,8 @@ import { LoginComponent } from './login/login.component';
 import { SharedModule } from '../shared/shared.module';
 import { AnswersComponent } from './answers/answers.component';
 import { GraphicComponent } from './graphic/graphic.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -24,7 +26,9 @@ import { GraphicComponent } from './graphic/graphic.component';
     CommonModule,
     RouterModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    NgxChartsModule,
+    BrowserAnimationsModule
   ]
 })
 export class RoutsModule { }
