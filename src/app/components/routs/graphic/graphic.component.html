@@ -1,27 +1,49 @@
-<body style="background-color: var(); font-family: Helvetica;" class="pt-5">
+<body style="background-color: var(--background-color-1); font-family: Helvetica;" class="pt-5">
     
-<div class="">
+<div class="pt-5 container-fluid" >
+  <div class="row pt-5">
+    <div class="col-2"></div>
+    <div class="col-8 text-light">
+      
+          <ngx-charts-line-chart
+          [view]="view"
+          [scheme]="colorScheme"
+          [legend]="legend"
+          [showXAxisLabel]="showXAxisLabel"
+          [showYAxisLabel]="showYAxisLabel"
+          [xAxis]="xAxis"
+          [yAxis]="yAxis"
+          [xAxisLabel]="xAxisLabel"
+          [yAxisLabel]="yAxisLabel"
+          [timeline]="timeline"
+          [results]="multi"
+          (select)="onSelect($event)"
+          (activate)="onActivate($event)"
+          (deactivate)="onDeactivate($event)"
+          
+          
+          
+          
+          >
+        </ngx-charts-line-chart>
 
-<ngx-charts-line-chart
-  [view]="view"
-  scheme="air"
-  [legend]="legend"
-  [showXAxisLabel]="showXAxisLabel"
-  [showYAxisLabel]="showYAxisLabel"
-  [xAxis]="xAxis"
-  [yAxis]="yAxis"
-  [xAxisLabel]="xAxisLabel"
-  [yAxisLabel]="yAxisLabel"
-  [timeline]="timeline"
-  [results]="multi"
-  (select)="onSelect($event)"
-  (activate)="onActivate($event)"
-  (deactivate)="onDeactivate($event)"
-  >
-</ngx-charts-line-chart>
+        <div>
+          <button class="btn btn-dark mt-5" (click)="random()">Random</button>
+        </div>
+
+    </div>
+    <div class="col-2"></div>
+  
+
+  </div>
 
 
 </div>
 
+
+<div class="">
+ 
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
 
 </body>

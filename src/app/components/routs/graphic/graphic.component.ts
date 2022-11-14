@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GraphicService } from 'src/app/services/graphic.service';
 
 @Component({
   selector: 'app-graphic',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GraphicComponent implements OnInit {
 
-  /* multi = []; */
+  
   view: [number, number] = [1000, 400];
 
   // options
@@ -19,16 +20,28 @@ export class GraphicComponent implements OnInit {
   showYAxisLabel: boolean = true;
   showXAxisLabel: boolean = true;
   xAxisLabel: string = 'Year';
-  yAxisLabel: string = 'Population';
+  yAxisLabel: any = 'Flowkai';
+  color ='#5AA454';
+ 
   timeline: boolean = true;
+  
+  
 
   colorScheme:any = {
     domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5']
   };
 
-  constructor() {
+  constructor(private graphicServices: GraphicService) {
    /*  Object.assign(this, { multi }); */
   }
+
+ get multi(){
+  return this.graphicServices.countriesData
+ }
+
+  random(){
+  return this.graphicServices.randomData();
+ }
 
   onSelect(data:any): void {
     console.log('Item clicked', JSON.parse(JSON.stringify(data)));
@@ -45,75 +58,7 @@ export class GraphicComponent implements OnInit {
   ngOnInit(): void {
   }
 
- multi = [
-    {
-      "name": "Germany",
-      "series": [
-        {
-          "name": "1990",
-          "value": 62000000
-        },
-        {
-          "name": "2010",
-          "value": 73000000
-        },
-        {
-          "name": "2011",
-          "value": 89400000
-        }
-      ]
-    },
-  
-    {
-      "name": "USA",
-      "series": [
-        {
-          "name": "1990",
-          "value": 250000000
-        },
-        {
-          "name": "2010",
-          "value": 309000000
-        },
-        {
-          "name": "2011",
-          "value": 311000000
-        }
-      ]
-    },
-  
-    {
-      "name": "France",
-      "series": [
-        {
-          "name": "1990",
-          "value": 58000000
-        },
-        {
-          "name": "2010",
-          "value": 50000020
-        },
-        {
-          "name": "2011",
-          "value": 58000000
-        }
-      ]
-    },
-    {
-      "name": "UK",
-      "series": [
-        {
-          "name": "1990",
-          "value": 57000000
-        },
-        {
-          "name": "2010",
-          "value": 62000000
-        }
-      ]
-    }
-  ];
-  
+ 
 
   
 
