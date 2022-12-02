@@ -24,9 +24,9 @@ export class LogiComponent{
    
       google.accounts.id.initialize({
         /* LOCAL */
-          client_id: '1064213116404-kqprdnr0l66nmaf5lapc171otrukc1f2.apps.googleusercontent.com', 
+       /*    client_id: '1064213116404-kqprdnr0l66nmaf5lapc171otrukc1f2.apps.googleusercontent.com',  */
         /*  */
-        /*  client_id: '1064213116404-t6okm41beb23vk6pihfa6lu1nc01in44.apps.googleusercontent.com',   */
+         client_id: '1064213116404-t6okm41beb23vk6pihfa6lu1nc01in44.apps.googleusercontent.com',   
         callback: this.handleCredentialResponse
       });
       google.accounts.id.renderButton(

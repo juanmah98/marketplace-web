@@ -19,16 +19,18 @@ export class GraphicComponent implements OnInit {
   yAxis: boolean = true;
   showYAxisLabel: boolean = true;
   showXAxisLabel: boolean = true;
+  
+  autoScale: boolean = true;
   xAxisLabel: string = 'Year';
   yAxisLabel: any = 'Flowkai';
   color ='#5AA454';
  
-  timeline: boolean = true;
+  timeline: boolean = false;
   
   
 
   colorScheme:any = {
-    domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5']
+    domain: ['#5AA454', '#E44D25', '#23A6F0', '#a8385d', '#a8385d', '#aae3f5']
   };
 
   constructor(private graphicServices: GraphicService) {

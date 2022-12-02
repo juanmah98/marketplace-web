@@ -3,7 +3,7 @@
 <div class="pt-5 container-fluid" >
   <div class="row pt-5">
     <div class="col-2"></div>
-    <div class="col-8 text-light">
+    <div class="col-8 pt-5 pb-2 text-light" style="background-color: rgb(255, 255, 255);">
       
           <ngx-charts-line-chart
           [view]="view"
@@ -11,6 +11,8 @@
           [legend]="legend"
           [showXAxisLabel]="showXAxisLabel"
           [showYAxisLabel]="showYAxisLabel"
+          
+          [autoScale]="autoScale"
           [xAxis]="xAxis"
           [yAxis]="yAxis"
           [xAxisLabel]="xAxisLabel"
@@ -20,6 +22,7 @@
           (select)="onSelect($event)"
           (activate)="onActivate($event)"
           (deactivate)="onDeactivate($event)"
+          
           
           
           
