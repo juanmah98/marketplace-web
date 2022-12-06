@@ -3,15 +3,16 @@
 <div class="pt-5 container-fluid" >
   <div class="row pt-5">
     <div class="col-2"></div>
-    <div class="col-8 pt-5 pb-2 text-light" style="background-color: rgb(255, 255, 255);">
+    <div class="col-8 pt-5 pb-2" style="background-color: rgb(255, 255, 255);">
       
           <ngx-charts-line-chart
           [view]="view"
           [scheme]="colorScheme"
           [legend]="legend"
+          [legendTitle]="legendTitle"
+          [legendPosition]="legendPosition"
           [showXAxisLabel]="showXAxisLabel"
           [showYAxisLabel]="showYAxisLabel"
-          
           [autoScale]="autoScale"
           [xAxis]="xAxis"
           [yAxis]="yAxis"
@@ -30,9 +31,9 @@
           >
         </ngx-charts-line-chart>
 
-        <div>
+        <!-- <div>
           <button class="btn btn-dark mt-5" (click)="random()">Random</button>
-        </div>
+        </div> -->
 
     </div>
     <div class="col-2"></div>
