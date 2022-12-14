@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { GraphicService } from 'src/app/services/graphic.service';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { LegendPosition } from '@swimlane/ngx-charts';
+import { ActivatedRoute, ParamMap   } from '@angular/router';
 
 @Component({
   selector: 'app-graphic',
@@ -34,7 +35,10 @@ export class GraphicComponent implements OnInit {
   
   date = '';
   name = '';
-  drop='1';
+  drop='';
+titel = 'Graphic 1';
+id: string = '';
+
 
   colorScheme:any = {
     domain: ['#5AA454', '#E44D25', '#23A6F0', '#a8385d', '#a8385d', '#aae3f5']
@@ -43,7 +47,7 @@ export class GraphicComponent implements OnInit {
 /*   mdq: MediaQueryList;
   mediaQueryListener:()=>void; */
 
-  constructor(private graphicServices: GraphicService,  changeDetectorRef: ChangeDetectorRef, media: MediaMatcher ) {
+  constructor(private graphicServices: GraphicService,  changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private rutaActiva: ActivatedRoute ) {
    /*  Object.assign(this, { multi }); */
    
    setTimeout(() => {
@@ -52,6 +56,22 @@ export class GraphicComponent implements OnInit {
    },1)
 
    
+  }
+
+  ngOnInit(): void {
+    this.rutaActiva.paramMap.subscribe((params: ParamMap) => {
+      this.id = params.get('id')!;
+
+      
+    });
+    if(this.drop==''){
+      this.drop = this.id
+    }
+    console.log("id: " + this.id)
+    setTimeout(() => {
+      this.tamVentana()
+      this.ngOnInit()
+      },1000)
   }
 
  tamVentana() {
@@ -89,12 +109,6 @@ export class GraphicComponent implements OnInit {
     }
     return tam;
   }
-  ngOnInit(): void {
-    setTimeout(() => {
-      this.tamVentana()
-      this.ngOnInit()
-      },1000)
-  }
 
  get multi(){
   return this.graphicServices.countriesData
@@ -102,6 +116,7 @@ export class GraphicComponent implements OnInit {
 
  get multi2(){
   return this.graphicServices.countriesData2
+  this.titel = 'Graphic 2'
  }
 
  get multi3(){
@@ -110,27 +125,33 @@ export class GraphicComponent implements OnInit {
 
  dropD1(){
   this.drop = '1'
+  this.titel = 'Graphic 1'
  }
 
  dropD2(){
   this.drop = '2'
+  
  }
 
  dropD3(){
   this.drop = '3'
+  this.titel = 'Graphic 1'
  }
 
  dropDown():any{
   switch(this.drop) { 
     case "1": { 
+      this.titel = 'Graphic 1'
       return this.multi 
        break; 
     } 
     case "2": { 
+      this.titel = 'Graphic 2'
      return this.multi2
        break; 
     } 
     case "3": { 
+      this.titel = 'Graphic 3'
       return this.multi3
       break; 
    } 
