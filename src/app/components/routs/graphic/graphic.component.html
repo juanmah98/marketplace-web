@@ -2,9 +2,21 @@
     
 <div class="pt-5 container-fluid" >
   <div class="row pt-5">
+    <div class="col-12 text-center pb-3">
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Graphics
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item"  (click)="drop = '1'" >Graphic 1</a></li>
+          <li><a class="dropdown-item"  (click)="drop = '2'">Graphic 2</a></li>
+          <li><a class="dropdown-item" (click)="drop = '3'">Graphic 3</a></li>
+        </ul>
+      </div>
+    </div>
     <div class="col-2"></div>
     <div class="col-8 pt-5 pb-2" style="background-color: rgb(255, 255, 255);">
-      
+      <p class="fs-4 text-center">{{name}} <b>{{date | date:'yyyy-MM' }}</b></p>
           <ngx-charts-line-chart
           [view]="view"
           [scheme]="colorScheme"
@@ -18,22 +30,18 @@
           [yAxis]="yAxis"
           [xAxisLabel]="xAxisLabel"
           [yAxisLabel]="yAxisLabel"
-          [timeline]="timeline"
-          [results]="multi"
+          [results]="dropDown()"
+          [timeline]="true"
           (select)="onSelect($event)"
           (activate)="onActivate($event)"
           (deactivate)="onDeactivate($event)"
-          
-          
-          
-          
-          
           >
         </ngx-charts-line-chart>
 
         <!-- <div>
           <button class="btn btn-dark mt-5" (click)="random()">Random</button>
         </div> -->
+       
 
     </div>
     <div class="col-2"></div>

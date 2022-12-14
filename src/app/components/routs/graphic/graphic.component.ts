@@ -32,7 +32,9 @@ export class GraphicComponent implements OnInit {
  
   timeline: boolean = true;
   
-  
+  date = '';
+  name = '';
+  drop='1';
 
   colorScheme:any = {
     domain: ['#5AA454', '#E44D25', '#23A6F0', '#a8385d', '#a8385d', '#aae3f5']
@@ -46,6 +48,7 @@ export class GraphicComponent implements OnInit {
    
    setTimeout(() => {
    this.tamVentana()
+   
    },1)
 
    
@@ -97,19 +100,74 @@ export class GraphicComponent implements OnInit {
   return this.graphicServices.countriesData
  }
 
-  random(){
-  return this.graphicServices.randomData();
+ get multi2(){
+  return this.graphicServices.countriesData2
  }
+
+ get multi3(){
+  return this.graphicServices.countriesData3
+ }
+
+ dropD1(){
+  this.drop = '1'
+ }
+
+ dropD2(){
+  this.drop = '2'
+ }
+
+ dropD3(){
+  this.drop = '3'
+ }
+
+ dropDown():any{
+  switch(this.drop) { 
+    case "1": { 
+      return this.multi 
+       break; 
+    } 
+    case "2": { 
+     return this.multi2
+       break; 
+    } 
+    case "3": { 
+      return this.multi3
+      break; 
+   } 
+    default: { 
+      return this.multi 
+       break; 
+    } 
+ } 
+
+  
+ }
+
+
+
+ 
+
+/*   random(){
+  return this.graphicServices.randomData();
+ } */
 
   onSelect(data:any): void {
     console.log('Item clicked', JSON.parse(JSON.stringify(data)));
+     this.date = data.name; 
+     this.name = data.series;
+    console.log(this.name)
   }
 
   onActivate(data:any): void {
     console.log('Activate', JSON.parse(JSON.stringify(data)));
+    console.log(this.drop)
+   /*  this.name = data.value.name;
+    console.log(this.name) */
+   
   }
 
   onDeactivate(data:any): void {
+    
     console.log('Deactivate', JSON.parse(JSON.stringify(data)));
   }
 
