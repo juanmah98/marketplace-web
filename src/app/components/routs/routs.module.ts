@@ -10,6 +10,7 @@ import { GraphicComponent } from './graphic/graphic.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
+import { TeamComponent } from './team/team.component';
 
 
 
@@ -19,7 +20,8 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
     LoginComponent,
     AnswersComponent,
     GraphicComponent,
-    ComingSoonComponent
+    ComingSoonComponent,
+    TeamComponent
   ],
   exports:[
     AnswersComponent

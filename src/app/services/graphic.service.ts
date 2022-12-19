@@ -387,7 +387,7 @@ export class GraphicService {
     
             {
             "name": new Date("2002-01"),
-            "value": 8000,
+            "value": 800,
           },
           {
             "name": new Date("2002-02"),

@@ -1,9 +1,11 @@
 <body style="background-color: var(--background-color-1); font-family: Helvetica;" class="pt-5">
     
 <div class="pt-5 container-fluid" >
-  <div class="row pt-5">
+  <div *ngIf="loading == true" class="row pt-5">
+   
     <div class="col-12 text-center pb-3">
       <div class="dropdown">
+        <h3 class="text-light pt-2">{{titel}}</h3>
         <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           Graphics
         </button>
@@ -12,11 +14,17 @@
           <li><a class="dropdown-item"  (click)="drop = '2'">Graphic 2</a></li>
           <li><a class="dropdown-item" (click)="drop = '3'">Graphic 3</a></li>
         </ul>
-        <h3 class="text-light pt-2">{{titel}}</h3>
+
+        <div class="pt-3">
+          <button class="btn btn-secondary m-2" (click)="polar = false">Line chart</button>
+          <button class="btn btn-light m-2" (click)="polar = true">Polar chart</button>
+        </div>
+       
+       
       </div>
     </div>
-    <div class="col-2"></div>
-    <div class="col-8 pt-5 pb-2" style="background-color: rgb(255, 255, 255);">
+    <div class="col-2 d-none d-md-block"></div>
+    <div *ngIf="polar == false" class="col-md-8 col-sm-12 pt-5 pb-2 graphic rounded">
       <p class="fs-4 text-center">{{name}} <b>{{date | date:'yyyy-MM' }}</b></p>
           <ngx-charts-line-chart
           [view]="view"
@@ -45,12 +53,41 @@
        
 
     </div>
-    <div class="col-2"></div>
+
+    <div *ngIf="polar == true" class="col-md-8 col-sm-12 pt-5 pb-2 graphic rounded">
+      <p class="fs-4 text-center">{{name}} <b>{{date | date:'yyyy-MM' }}</b></p>
+      <ngx-charts-polar-chart
+      [view]="view"
+      [scheme]="colorScheme"
+      [legend]="legend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxis]="false"
+      [yAxis]="yAxis"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      [results]="dropDown()"
+      (select)="onSelect($event)">
+    </ngx-charts-polar-chart>
+
+        <!-- <div>
+          <button class="btn btn-dark mt-5" (click)="random()">Random</button>
+        </div> -->
+       
+
+    </div>
+    <div class="col-2 d-none d-md-block"></div>
   
 
   </div>
 
 
+<div  *ngIf="loading == false" class="d-flex align-items-center justify-content-center" style="padding-top: 150px;">
+  <div class="spinner-border text-info" style="width: 3rem; height: 3rem;" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <p class="text-light fs-5 pt-3 px-2">Loading...</p>
+</div>
 </div>
 
 

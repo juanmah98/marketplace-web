@@ -5,6 +5,7 @@ import { ComingSoonComponent } from './components/routs/coming-soon/coming-soon.
 import { GraphicComponent } from './components/routs/graphic/graphic.component';
 import { HomeComponent } from './components/routs/home/home.component';
 import { LoginComponent } from './components/routs/login/login.component';
+import { TeamComponent } from './components/routs/team/team.component';
 
 const routes: Routes = [
 
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'answers', component: AnswersComponent},   
   {path: 'graphic/:id', component: GraphicComponent},  
-  {path: 'coming', component: ComingSoonComponent}
+  {path: 'coming', component: ComingSoonComponent},
+  {path: 'team', component: TeamComponent}
 
 ];
 

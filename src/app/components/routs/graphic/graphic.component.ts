@@ -11,6 +11,7 @@ import { ActivatedRoute, ParamMap   } from '@angular/router';
 })
 export class GraphicComponent implements OnInit {
 
+  loading: boolean = false;
   
   view: [number, number] = [1000, 400];
 
@@ -36,13 +37,28 @@ export class GraphicComponent implements OnInit {
   date = '';
   name = '';
   drop='';
-titel = 'Graphic 1';
-id: string = '';
+  titel = 'Graphic 1';
+  id: string = '';
+
 
 
   colorScheme:any = {
     domain: ['#5AA454', '#E44D25', '#23A6F0', '#a8385d', '#a8385d', '#aae3f5']
   };
+
+
+  /* POLAR */
+
+  polar: boolean = false
+
+  // options
+
+
+/*   onSelect(event) {
+    console.log(event);
+  }
+ */
+  /* ------------- */
 
 /*   mdq: MediaQueryList;
   mediaQueryListener:()=>void; */
@@ -61,13 +77,18 @@ id: string = '';
   ngOnInit(): void {
     this.rutaActiva.paramMap.subscribe((params: ParamMap) => {
       this.id = params.get('id')!;
-
+     
+      if(this.id == "2" && this.loading == false) {
+        this.loading = false
+        setTimeout(() => {
+          this.loading = true
+          },2000)
+      }else this.loading = true
       
     });
     if(this.drop==''){
       this.drop = this.id
     }
-    console.log("id: " + this.id)
     setTimeout(() => {
       this.tamVentana()
       this.ngOnInit()
@@ -78,7 +99,12 @@ id: string = '';
     var tam: [number, number]  = [0, 0];
     if (typeof window.innerWidth != 'undefined')
     {
-      tam = [window.innerWidth / 1.6, window.innerHeight /  1.6];
+      if(window.innerWidth > 766){
+        tam = [window.innerWidth / 1.6, window.innerHeight /  1.6];
+      }else{
+        tam = [window.innerWidth / 1.03, window.innerHeight /  1.3];
+      }     
+    
     }
     else if (typeof document.documentElement != 'undefined'
         && typeof document.documentElement.clientWidth !=
@@ -177,7 +203,9 @@ id: string = '';
      this.date = data.name; 
      this.name = data.series;
     console.log(this.name)
+    console.log(this.multi[0].series[0].name)
   }
+  
 
   onActivate(data:any): void {
     console.log('Activate', JSON.parse(JSON.stringify(data)));
