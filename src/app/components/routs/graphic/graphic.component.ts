@@ -128,7 +128,11 @@ export class GraphicComponent implements OnInit {
       this.showXAxisLabel = false
       this.showYAxisLabel = false
       this.legendPosition = LegendPosition.Below;
+      if(this.polar==true){
+        this.legend = false;
+      }
     }else{
+      this.legend = true;
       this.showXAxisLabel = true
       this.showYAxisLabel = true
       this.legendPosition = LegendPosition.Right;
@@ -221,8 +225,15 @@ export class GraphicComponent implements OnInit {
   }
 
 
- 
-
+/* downloadObjectAsJson(exportObj:any, exportName:string) {
+    var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj));
+    var downloadAnchorNode = document.createElement('a');
+    downloadAnchorNode.setAttribute("href", dataStr);
+    downloadAnchorNode.setAttribute("download", exportName + ".json");
+    document.body.appendChild(downloadAnchorNode); // required for firefox
+    downloadAnchorNode.click();
+    downloadAnchorNode.remove();
+  } */
   
 
 }
