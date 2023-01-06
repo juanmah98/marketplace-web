@@ -27,6 +27,7 @@
     <div *ngIf="polar == false" class="col-md-8 col-sm-12 pt-5 pb-2 graphic rounded">
       <p class="fs-4 text-center">{{name}} <b>{{date | date:'yyyy-MM' }}</b></p>
           <ngx-charts-line-chart
+          class="dark-theme"
           [view]="view"
           [scheme]="colorScheme"
           [legend]="legend"
