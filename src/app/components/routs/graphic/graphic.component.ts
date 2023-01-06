@@ -3,7 +3,7 @@ import { GraphicService } from 'src/app/services/graphic.service';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { LegendPosition } from '@swimlane/ngx-charts';
 import { ActivatedRoute, ParamMap   } from '@angular/router';
-
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 @Component({
   selector: 'app-graphic',
   templateUrl: './graphic.component.html',
@@ -40,6 +40,20 @@ export class GraphicComponent implements OnInit {
   titel = 'Graphic 1';
   id: string = '';
 
+  yAxis2 = [
+    {
+      scale: {
+        nice: false
+      },
+      title: 'Eje Y 1'
+    },
+    {
+      scale: {
+        nice: false
+      },
+      title: 'Eje Y 2'
+    }
+  ];
 
 
   colorScheme:any = {

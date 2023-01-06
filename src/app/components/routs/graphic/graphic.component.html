@@ -42,9 +42,18 @@
           [results]="dropDown()"
           [timeline]="true"
           (select)="onSelect($event)"
+          
           (activate)="onActivate($event)"
           (deactivate)="onDeactivate($event)"
           >
+          <ngx-charts-series
+          *ngFor="let s of data"
+          [name]="s.name"
+          [color]="s.color"
+          [data]="s.series"
+          type="line"
+          [yAxis]="s.yAxis">
+        </ngx-charts-series>
         </ngx-charts-line-chart>
 
         <!-- <div>
