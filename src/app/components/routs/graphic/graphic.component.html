@@ -37,6 +37,7 @@
           [autoScale]="autoScale"
           [xAxis]="xAxis"
           [yAxis]="yAxis"
+        
           [xAxisLabel]="xAxisLabel"
           [yAxisLabel]="yAxisLabel"
           [results]="dropDown()"
@@ -46,16 +47,9 @@
           (activate)="onActivate($event)"
           (deactivate)="onDeactivate($event)"
           >
-          <ngx-charts-series
-          *ngFor="let s of data"
-          [name]="s.name"
-          [color]="s.color"
-          [data]="s.series"
-          type="line"
-          [yAxis]="s.yAxis">
-        </ngx-charts-series>
+        
+       
         </ngx-charts-line-chart>
-
         <!-- <div>
           <button class="btn btn-dark mt-5" (click)="random()">Random</button>
         </div> -->
@@ -63,6 +57,7 @@
 
     </div>
 
+    div
     <div *ngIf="polar == true" class="col-md-8 col-sm-12 pt-5 pb-2 graphic rounded">
       <p class="fs-4 text-center">{{name}} <b>{{date | date:'yyyy-MM' }}</b></p>
       <ngx-charts-polar-chart

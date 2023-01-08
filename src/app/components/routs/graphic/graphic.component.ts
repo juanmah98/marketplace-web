@@ -4,6 +4,9 @@ import { MediaMatcher } from '@angular/cdk/layout';
 import { LegendPosition } from '@swimlane/ngx-charts';
 import { ActivatedRoute, ParamMap   } from '@angular/router';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { scaleLinear } from 'd3-scale';
+import { line } from 'd3-shape';
+
 @Component({
   selector: 'app-graphic',
   templateUrl: './graphic.component.html',
@@ -42,16 +45,12 @@ export class GraphicComponent implements OnInit {
 
   yAxis2 = [
     {
-      scale: {
-        nice: false
-      },
-      title: 'Eje Y 1'
+      id: 'y-axis-1',
+      scale: 'linear',
     },
     {
-      scale: {
-        nice: false
-      },
-      title: 'Eje Y 2'
+      id: 'y-axis-2',
+      scale: 'linear',
     }
   ];
 

@@ -7,7 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { SharedModule } from '../shared/shared.module';
 import { AnswersComponent } from './answers/answers.component';
 import { GraphicComponent } from './graphic/graphic.component';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { LineChartModule, NgxChartsModule } from '@swimlane/ngx-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { TeamComponent } from './team/team.component';
@@ -32,6 +32,7 @@ import { TeamComponent } from './team/team.component';
     FormsModule,
     SharedModule,
     NgxChartsModule,
+    LineChartModule,
     BrowserAnimationsModule
   ]
 })
