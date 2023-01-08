@@ -11,6 +11,8 @@ import { LineChartModule, NgxChartsModule } from '@swimlane/ngx-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { TeamComponent } from './team/team.component';
+import { ZingchartAngularModule } from 'zingchart-angular';
+import { GraphicTwoComponent } from './graphic-two/graphic-two.component';
 
 
 
@@ -21,7 +23,8 @@ import { TeamComponent } from './team/team.component';
     AnswersComponent,
     GraphicComponent,
     ComingSoonComponent,
-    TeamComponent
+    TeamComponent,
+    GraphicTwoComponent
   ],
   exports:[
     AnswersComponent
@@ -33,7 +36,8 @@ import { TeamComponent } from './team/team.component';
     SharedModule,
     NgxChartsModule,
     LineChartModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ZingchartAngularModule
   ]
 })
 export class RoutsModule { }

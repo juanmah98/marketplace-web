@@ -14,6 +14,7 @@ import { line } from 'd3-shape';
 })
 export class GraphicComponent implements OnInit {
 
+ 
   loading: boolean = false;
   
   view: [number, number] = [1000, 400];
