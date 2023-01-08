@@ -212,7 +212,7 @@ export class GraphicTwoComponent implements OnInit {
       }
     ]
   };
-  constructor(private graphicServices: GraphicService,) { }
+  constructor(private graphicServices: GraphicService,) {}
 
   ngOnInit(): void {
   }
