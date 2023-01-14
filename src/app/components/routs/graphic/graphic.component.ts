@@ -158,14 +158,14 @@ export class GraphicComponent implements OnInit {
   return this.graphicServices.countriesData
  }
 
- get multi2(){
+/*  get multi2(){
   return this.graphicServices.countriesData2
   this.titel = 'Graphic 2'
  }
 
  get multi3(){
   return this.graphicServices.countriesData3
- }
+ } */
 
  dropD1(){
   this.drop = '1'
@@ -189,7 +189,7 @@ export class GraphicComponent implements OnInit {
       return this.multi 
        break; 
     } 
-    case "2": { 
+   /*  case "2": { 
       this.titel = 'Graphic 2'
      return this.multi2
        break; 
@@ -198,7 +198,7 @@ export class GraphicComponent implements OnInit {
       this.titel = 'Graphic 3'
       return this.multi3
       break; 
-   } 
+   }  */
     default: { 
       return this.multi 
        break; 
