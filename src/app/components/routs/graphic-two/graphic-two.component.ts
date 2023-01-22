@@ -17,9 +17,39 @@ export class GraphicTwoComponent implements OnInit {
     type: 'line',
     
     title: {
-      text: 'Dual yAxis Line Chart'
+      /* text: 'Dual yAxis Line Chart FLOWKAI' */
     },
-    legend: {},
+    legend: {
+      "layout": "float",
+      "background-color": "none",
+      "border-width": 0,
+    
+      "align": "center",
+      "adjust-layout": true,
+      "toggle-action": "remove",
+      "item": {
+        
+        "cursor": "hand"
+      }
+    },
+    "crosshair-x": {
+      "line-color": "#efefef",
+      "plot-label": {
+        "border-radius": "5px",
+        "border-width": "1px",
+        "border-color": "#f6f7f8",
+        "padding": "10px",
+        "font-weight": "bold"
+      },
+      "scale-label": {
+        "font-color": "#000",
+        "background-color": "#f6f7f8",
+        "border-radius": "5px",
+        
+      }
+    },
+    
+
     scaleY: {
       label: {
         text: 'yAxis 1' , 
@@ -38,9 +68,9 @@ export class GraphicTwoComponent implements OnInit {
       }
     },
 
-    scaleX: {
+     scaleX: {
       
-      "transform": {
+      /* "transform": {
         "type": "date",
         "all": "%D, %d %M<br />%h:%i %A",
         "item": {
@@ -50,9 +80,18 @@ export class GraphicTwoComponent implements OnInit {
       "label": {
         "visible": false
       },
-      "minor-ticks": 0
-    },
+      "minor-ticks": 0 */
+      zooming: true,
+      // enable auto-date formatting
+     /*  transform: {
+        type: 'date',
+      }, */
     
+    }, 
+    
+        preview: {
+      adjustLayout: true,
+    }, 
     scaleY2: {
       label: {
         text: 'yAxis 2',
@@ -69,6 +108,7 @@ export class GraphicTwoComponent implements OnInit {
         lineStyle: 'dotted',
         lineColor: 'black'
       },
+      format: "%v%"
      
     },
     plot: {

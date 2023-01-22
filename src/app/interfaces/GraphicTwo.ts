@@ -1,5 +1,5 @@
 export interface Datos {
-    values: number[];
+    values: any[];
     text:   string;
     scales: string;
 }
