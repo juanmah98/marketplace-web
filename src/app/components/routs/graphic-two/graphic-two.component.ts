@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GraphicService } from 'src/app/services/graphic.service';
+import { __values } from 'tslib';
 
 @Component({
   selector: 'app-graphic-two',
@@ -8,11 +9,17 @@ import { GraphicService } from 'src/app/services/graphic.service';
 })
 export class GraphicTwoComponent implements OnInit {
 
+  change:boolean = false;
+
   constructor(private graphicServices: GraphicService,) {}
 
   ngOnInit(): void {
   }
   
+   
+axis2?:boolean;
+yaxis2?:string;
+
   config2: ZingchartAngular.graphset = {
     type: 'line',
     
@@ -93,9 +100,12 @@ export class GraphicTwoComponent implements OnInit {
       adjustLayout: true,
     }, 
     scaleY2: {
+      
       label: {
+        
         text: 'yAxis 2',
         fontSize: '14px',
+        
       },
       item: {
         fontColor: 'black'
@@ -108,7 +118,12 @@ export class GraphicTwoComponent implements OnInit {
         lineStyle: 'dotted',
         lineColor: 'black'
       },
-      format: "%v%"
+      format: "%v%",
+    //estamos estableciendo los valores de la escala Y2
+    // en un rango de 0 a 100 con un incremento de 10, y especificando un valor máximo de 100.
+   
+      "values": this.yaxis2,
+    "max-value": 100
      
     },
     plot: {
@@ -119,12 +134,25 @@ export class GraphicTwoComponent implements OnInit {
     
   };
 
- 
 
 
   get multi(){
-    return this.graphicServices.datosData
+    if(this.axis2!=false){
+      this.yaxis2 = "";
+      return this.graphicServices.datosData
+    }
+    else{
+      let a =  this.graphicServices.datosData;
+      a.forEach( b => {
+        b.scales = 'scale-x, scale-y-2';
+      })
+      this.yaxis2 = "0:100:10";
+      return a;
+    }
    }
 
+/*    get multi(){
+      return this.graphicServices.datosData
+   } */
    
 }

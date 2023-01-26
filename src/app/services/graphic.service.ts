@@ -51,7 +51,7 @@ export class GraphicService {
   [ "2008", 10 ]
       ],
       text: 'Apple',
-      scales: 'scale-x, scale-y-2',
+      scales: 'scale-x, scale-y',
     },
     {
       values: [
@@ -78,7 +78,7 @@ export class GraphicService {
   [ "2008", 8 ]
       ],
       text: 'Xiaomi',
-      scales: 'scale-x, scale-y-2',
+      scales: 'scale-x, scale-y',
     },
      {
       values: [

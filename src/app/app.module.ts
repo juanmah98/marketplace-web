@@ -9,6 +9,7 @@ import { LayoutModule } from './components/layout/layout.module';
 import { RoutsModule } from './components/routs/routs.module';
 import { SharedModule } from './components/shared/shared.module';
 import { LineChartModule, NgxChartsModule} from '@swimlane/ngx-charts';
+import { ZingchartAngularModule } from 'zingchart-angular';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { LineChartModule, NgxChartsModule} from '@swimlane/ngx-charts';
     HttpClientModule,
     NgxChartsModule,
     LineChartModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ZingchartAngularModule
   ],
   providers: [],
   bootstrap: [AppComponent]

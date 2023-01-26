@@ -2,16 +2,22 @@
     
     <div class="pt-5 container-fluid" >
 
-            <div class="text-center text-light">
-                <h2 class="fw-bold">One dataflow</h2>
+      <div class="text-center text-light pt-2 pb-3">
+        <h1 class="fw-bold">Industry Insights Dashboard</h1>
+      </div>
+
+            <div class="text-center text-light pt-2">
+                <h2 *ngIf="change==false" class="fw-bold">One dataflow</h2>
+                <h2 *ngIf="change==true" class="fw-bold">Correlation</h2>
             </div>
 
             <div class="row">
                 <div class="col-md-2 col-sm-6 ">
-                    <button class="btn btn-primary m-1">One dataflow</button>
-                    <button class="btn btn-light m-1">One dataflow</button>
+                  <h6 class="m-1 text-light">Options</h6>
+                    <button class="btn btn-primary m-1" (click)="change=false">One dataflow</button>
+                    <button class="btn btn-light m-1" (click)="change=true">Correlation</button>
                 </div>
-                <div class="col-4 text-light ">
+                <div  class="col-4 text-light " *ngIf="change==false">
                     <h4>Dynamic legend</h4>
                     <div class="d-flex">
 
@@ -47,13 +53,17 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 text-end p-1">
+            <div class="col-6 text-end p-1"  *ngIf="change==false">
                 <button class="btn btn-light m-1">Reset</button>
             </div>
+
+            <div class="col-10 text-end p-1"  *ngIf="change==true">
+              <button class="btn btn-light m-1">Reset</button>
+          </div>
             </div>
 
-            <div class="row pt-3 container-fluid">
-                <div class="col-2 bg-dark rounded-2 p-3 ">
+            <div class="row pt-3 container-fluid pb-3" *ngIf="change==false">
+                <div class="col-2 rounded-2 p-3 ">
 
                   <div class="text-light mb-2"> 
                     <div>
@@ -193,12 +203,305 @@
                     
 
                 </div>
-                <div class="col-10">
+                <div class="col-10 bg-l">
                     <div class="">
                         <zingchart-angular [config]="config2" [height]="500"></zingchart-angular>
                        </div>
                 </div>
             </div>
+
+
+
+
+
+            <div class="row pt-3 container-fluid pb-3" *ngIf="change==true">
+              <div class="col-2 rounded-2 p-3 ">
+
+                <div class="text-light mb-2"> 
+                  <div>
+                    <p class="fs-6 px-1 card-text">Dataflow</p>
+                  </div>
+                  <div class="dropdown ">
+                    <button class="btn btn-light btn-sm dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                       
+                </div>
+
+                <div class=" text-light mb-2"> 
+                  <div>
+                    <p class="fs-6 px-1 card-text">Measure</p>
+                  </div>
+                  <div class="dropdown ">
+                    <button class="btn btn-light btn-sm dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                       
+                </div>
+
+                <div class=" text-light mb-2"> 
+                  <div>
+                    <p class="fs-6 px-1 card-text">Category</p>
+                  </div>
+                  <div class="dropdown ">
+                    <button class="btn btn-light btn-sm dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                       
+                </div>
+
+                <div class=" text-light mb-2"> 
+                  <div>
+                    <p class="fs-6 px-1 card-text">Subcategory</p>
+                  </div>
+                  <div class="dropdown ">
+                    <button class="btn btn-light btn-sm dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                       
+                </div>
+
+                <div class=" text-light mb-2"> 
+                  <div>
+                    <p class="fs-6 px-1 card-text">Region</p>
+                  </div>
+                  <div class="dropdown ">
+                    <button class="btn btn-light btn-sm dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                       
+                </div>
+
+                <div class=" text-light mb-2"> 
+                  <div>
+                    <p class="fs-6 px-1 card-text">Frequency</p>
+                  </div>
+                  <div class="dropdown ">
+                    <button class="btn btn-light btn-sm dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                       
+                </div>
+
+                <div class=" text-light mb-2"> 
+                  <div>
+                    <p class="fs-6 px-1 card-text">Unit_of_Measure</p>
+                  </div>
+                  <div class="dropdown ">
+                    <button class="btn btn-light btn-sm dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                       
+                </div>
+
+                <div class=" text-light mb-2"> 
+                  <div>
+                    <p class="fs-6 px-1 card-text">Adjustment_Type</p>
+                  </div>
+                  <div class="dropdown ">
+                    <button class="btn btn-light btn-sm dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                       
+                </div>
+                  
+
+              </div>
+              <div class="col-8 bg-l">
+                  <div class="">
+                      <zingchart-angular [config]="config2" [height]="500"></zingchart-angular>
+                     </div>
+              </div>
+
+              <div class="col-2 rounded-2 p-3 text-end">
+
+                <div class="text-light mb-2"> 
+                  <div>
+                    <p class="fs-6 px-1 card-text">Dataflow</p>
+                  </div>
+                  <div class="dropdown ">
+                    <button class="btn btn-light btn-sm dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                       
+                </div>
+
+                <div class=" text-light mb-2"> 
+                  <div>
+                    <p class="fs-6 px-1 card-text">Measure</p>
+                  </div>
+                  <div class="dropdown ">
+                    <button class="btn btn-light btn-sm dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                       
+                </div>
+
+                <div class=" text-light mb-2"> 
+                  <div>
+                    <p class="fs-6 px-1 card-text">Category</p>
+                  </div>
+                  <div class="dropdown ">
+                    <button class="btn btn-light btn-sm dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                       
+                </div>
+
+                <div class=" text-light mb-2"> 
+                  <div>
+                    <p class="fs-6 px-1 card-text">Subcategory</p>
+                  </div>
+                  <div class="dropdown ">
+                    <button class="btn btn-light btn-sm dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                       
+                </div>
+
+                <div class=" text-light mb-2"> 
+                  <div>
+                    <p class="fs-6 px-1 card-text">Region</p>
+                  </div>
+                  <div class="dropdown ">
+                    <button class="btn btn-light btn-sm dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                       
+                </div>
+
+                <div class=" text-light mb-2"> 
+                  <div>
+                    <p class="fs-6 px-1 card-text">Frequency</p>
+                  </div>
+                  <div class="dropdown ">
+                    <button class="btn btn-light btn-sm dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                       
+                </div>
+
+                <div class=" text-light mb-2"> 
+                  <div>
+                    <p class="fs-6 px-1 card-text">Unit_of_Measure</p>
+                  </div>
+                  <div class="dropdown ">
+                    <button class="btn btn-light btn-sm dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                       
+                </div>
+
+                <div class=" text-light mb-2"> 
+                  <div>
+                    <p class="fs-6 px-1 card-text">Adjustment_Type</p>
+                  </div>
+                  <div class="dropdown ">
+                    <button class="btn btn-light btn-sm dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                       
+                </div>
+                  
+
+              </div>
+          </div>
            
 
         
