@@ -10,10 +10,15 @@ import { __values } from 'tslib';
 export class GraphicTwoComponent implements OnInit {
 
   change:boolean = false;
+  loading:boolean = false;
 
   constructor(private graphicServices: GraphicService,) {}
 
   ngOnInit(): void {
+
+    setTimeout(() => {
+      this.loading = true
+      },1000)
   }
   
    
@@ -151,6 +156,9 @@ yaxis2?:string;
     }
    }
 
+   reload(){
+    window.location.reload();
+   }
 /*    get multi(){
       return this.graphicServices.datosData
    } */

@@ -1,6 +1,14 @@
 <body style="background-color: var(--background-color-1); font-family: Helvetica;" class="pt-5">
     
-    <div class="pt-5 container-fluid" >
+  <!-- Loading -->
+  <div  *ngIf="loading == false" class="d-flex align-items-center justify-content-center" style="padding-top: 200px; padding-bottom: 500px;">
+    <div class="spinner-border text-info" style="width: 3rem; height: 3rem;" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <p class="text-light fs-5 pt-3 px-2">Loading...</p>
+   
+  </div>
+    <div *ngIf="loading == true" class="pt-5 container-fluid" >
 
       <div class="text-center text-light pt-2 pb-3">
         <h1 class="fw-bold">Industry Insights Dashboard</h1>
@@ -58,9 +66,11 @@
             </div>
 
             <div class="col-10 text-end p-1"  *ngIf="change==true">
-              <button class="btn btn-light m-1">Reset</button>
+              <button class="btn btn-light m-1" (click)="reload()">Reset</button>
           </div>
             </div>
+
+            <!-- One dataflow -->
 
             <div class="row pt-3 container-fluid pb-3" *ngIf="change==false">
                 <div class="col-2 rounded-2 p-3 ">
@@ -213,7 +223,7 @@
 
 
 
-
+            <!-- Correlation -->
             <div class="row pt-3 container-fluid pb-3" *ngIf="change==true">
               <div class="col-2 rounded-2 p-3 ">
 
