@@ -22,8 +22,8 @@
             <div class="row">
                 <div class="col-md-2 col-sm-6 ">
                   <h6 class="m-1 text-light">Options</h6>
-                    <button class="btn btn-primary m-1" (click)="change=false">One dataflow</button>
-                    <button class="btn btn-light m-1" (click)="change=true">Correlation</button>
+                    <button class="btn btn-primary m-1" (click)="change=false; cambio2()">One dataflow</button>
+                    <button class="btn btn-light m-1" (click)="change=true; cambio()">Correlation</button>
                 </div>
                 <div  class="col-4 text-light " *ngIf="change==false">
                     <h4>Dynamic legend</h4>
@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="col-6 text-end p-1"  *ngIf="change==false">
-                <button class="btn btn-light m-1">Reset</button>
+                <button class="btn btn-light m-1" (click)="reload()">Reset</button>
             </div>
 
             <div class="col-10 text-end p-1"  *ngIf="change==true">

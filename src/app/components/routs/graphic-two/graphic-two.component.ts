@@ -139,10 +139,23 @@ yaxis2?:string;
     
   };
 
+cambio(){
+  this.axis2 = false;
+  this.multi
+}
 
+cambio2(){
+  this.axis2 = true;
+  this.multi
+}
 
   get multi(){
     if(this.axis2!=false){
+      let a =  this.graphicServices.datosData;
+      a.forEach( b => {
+        b.scales = 'scale-x, scale-y';
+      })
+      
       this.yaxis2 = "";
       return this.graphicServices.datosData
     }
@@ -150,7 +163,7 @@ yaxis2?:string;
       let a =  this.graphicServices.datosData;
       a.forEach( b => {
         b.scales = 'scale-x, scale-y-2';
-      })
+      })      
       this.yaxis2 = "0:100:10";
       return a;
     }
