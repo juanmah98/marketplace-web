@@ -38,6 +38,10 @@ export class GraphicService {
     return this.datos
   }
 
+  get datosData2(){
+    return this.datos2
+  }
+
   private datos: Datos[] = [
 
     {
@@ -91,6 +95,64 @@ export class GraphicService {
   [ "2008", 5 ]
       ],
       text: 'Oppo',
+      scales: 'scale-x, scale-y',
+    }, 
+     
+  ]
+
+  private datos2: Datos[] = [
+
+    {
+      values: [
+        [ "2002", 23 ],
+  [ "2003", 3 ],
+  [ "2004", 5 ],
+  [ "2005", 10 ],
+  ["2006", 2 ],
+  [ "2007", 7 ],
+  [ "2008", 26 ]
+      ],
+      text: 'Nissan',
+      scales: 'scale-x, scale-y',
+    },
+    {
+      values: [
+        [ "2002", 4 ],
+  [ "2003", 20 ],
+  [ "2004", 27 ],
+  [ "2005", 24 ],
+  ["2006", 25 ],
+  [ "2007", 15 ],
+  [ "2008", 2 ]
+      ],
+      text: 'Toyota',
+      scales: 'scale-x, scale-y',
+    },
+    
+    {
+      values: [
+        [ "2002", 1 ],
+  [ "2003", 5 ],
+  [ "2004", 20 ],
+  [ "2005", 3 ],
+  ["2006", 15 ],
+  [ "2007", 11 ],
+  [ "2008", 6 ]
+      ],
+      text: 'Bmw',
+      scales: 'scale-x, scale-y',
+    },
+     {
+      values: [
+  [ "2002", 1 ],
+  [ "2003", 4 ],
+  [ "2004", 6 ],
+  [ "2005", 20 ],
+  ["2006", 6 ],
+  [ "2007", 2 ],
+  [ "2008", 5 ]
+      ],
+      text: 'Honda',
       scales: 'scale-x, scale-y',
     }, 
      

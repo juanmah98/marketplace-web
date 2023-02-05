@@ -10,8 +10,11 @@
   </div>
     <div *ngIf="loading == true" class="pt-5 container-fluid" >
 
-      <div class="text-center text-light pt-2 pb-3">
+      <div class="text-center row text-light pt-2 pb-3">
+        <div class="d-flex col justify-content-center">       
         <h1 class="fw-bold">Industry Insights Dashboard</h1>
+        <div class="mx-2"><img src="../../../../assets/Imagenes/Extras/icons8-gráfico-combinado-90.png" width="45px" alt=""></div>
+      </div>
       </div>
 
             <div class="text-center text-light pt-2">
@@ -32,15 +35,14 @@
                     
                     <div class="">
                         
-                        <div class="dropdown">
+                        <div class="dropdown" >
                             <p>Legend</p>
                             <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                               Dropdown button
                             </button>
                             <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">Action</a></li>
-                              <li><a class="dropdown-item" href="#">Another action</a></li>
-                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                              <li  *ngFor="let name of names"><a class="dropdown-item">{{name}}</a></li>
+                             
                             </ul>
                           </div>
                     </div>
@@ -53,9 +55,8 @@
                               Dropdown button
                             </button>
                             <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">Action</a></li>
-                              <li><a class="dropdown-item" href="#">Another action</a></li>
-                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                              <li><a class="dropdown-item" (click)="switch=false">Chart 1</a></li>
+                              <li><a class="dropdown-item"  (click)="switch=false">Chart 2</a></li>                              
                             </ul>
                           </div>
                     </div>

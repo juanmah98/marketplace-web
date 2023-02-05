@@ -11,6 +11,8 @@ export class GraphicTwoComponent implements OnInit {
 
   change:boolean = false;
   loading:boolean = false;
+  names:string[] = [];
+  switch:boolean=false;
 
   constructor(private graphicServices: GraphicService,) {}
 
@@ -19,6 +21,12 @@ export class GraphicTwoComponent implements OnInit {
     setTimeout(() => {
       this.loading = true
       },1000)
+
+       this.multi.forEach( b => {
+       this.names[this.names.length] = b.text      
+       
+      })
+      console.log(this.names)
   }
   
    
@@ -150,28 +158,52 @@ cambio2(){
 }
 
   get multi(){
+    
+    let a:any[] = [] ;
+      switch(this.switch) { 
+        case false: {          
+          a =  this.graphicServices.datosData2;
+           break; 
+        } 
+         case true: { 
+          a =  this.graphicServices.datosData;
+           break; 
+        }        
+        default: { 
+          break; 
+        } 
+     } 
+    
+      
+     
     if(this.axis2!=false){
-      let a =  this.graphicServices.datosData;
+     
+      
       a.forEach( b => {
         b.scales = 'scale-x, scale-y';
+       
       })
       
       this.yaxis2 = "";
-      return this.graphicServices.datosData
+      return a
     }
     else{
-      let a =  this.graphicServices.datosData;
+     
       a.forEach( b => {
         b.scales = 'scale-x, scale-y-2';
       })      
       this.yaxis2 = "0:100:10";
-      return a;
+      return this.graphicServices.datosData;
     }
    }
 
    reload(){
     window.location.reload();
    }
+
+
+
+
 /*    get multi(){
       return this.graphicServices.datosData
    } */
