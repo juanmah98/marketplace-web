@@ -7,6 +7,12 @@ import { LoginComponent } from './login/login.component';
 import { SharedModule } from '../shared/shared.module';
 import { AnswersComponent } from './answers/answers.component';
 import { GraphicComponent } from './graphic/graphic.component';
+import { LineChartModule, NgxChartsModule } from '@swimlane/ngx-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ComingSoonComponent } from './coming-soon/coming-soon.component';
+import { TeamComponent } from './team/team.component';
+import { ZingchartAngularModule } from 'zingchart-angular';
+import { GraphicTwoComponent } from './graphic-two/graphic-two.component';
 
 
 
@@ -15,7 +21,10 @@ import { GraphicComponent } from './graphic/graphic.component';
     HomeComponent,
     LoginComponent,
     AnswersComponent,
-    GraphicComponent
+    GraphicComponent,
+    ComingSoonComponent,
+    TeamComponent,
+    GraphicTwoComponent
   ],
   exports:[
     AnswersComponent
@@ -24,7 +33,11 @@ import { GraphicComponent } from './graphic/graphic.component';
     CommonModule,
     RouterModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    NgxChartsModule,
+    LineChartModule,
+    BrowserAnimationsModule,
+    ZingchartAngularModule
   ]
 })
 export class RoutsModule { }

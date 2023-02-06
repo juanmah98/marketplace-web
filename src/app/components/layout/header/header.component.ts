@@ -18,9 +18,9 @@ export class HeaderComponent implements OnInit {
     let token = sessionStorage.getItem("token") as string;
     let login = sessionStorage.getItem("login") as string;
     this.objetounico = this.decodificarJwt(token);
-    console.log("objeto" , this.objetounico);
+   /*  console.log("objeto" , this.objetounico);
     
-    console.log("sesion: ",login);
+    console.log("sesion: ",login); */
     if(login == "1"){
       this.sesion = true;
     }

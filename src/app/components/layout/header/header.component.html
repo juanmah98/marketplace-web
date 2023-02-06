@@ -16,44 +16,44 @@
                 <div class="navbar-content d-flex justify-content-end">
                     
                     <ul class="nav">
-                        <li class="nav-item">
+                        <li class="nav-item my-1">
                             <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none fs-7 p-2 m-1" [ngClass]="state1 == true ? 'isTrue' : 'isFalse' "  (click)="setState1()"  routerLink="" >
                                Products
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/home" >
+                        <li class="nav-item my-1">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/coming" >
                                 Resources
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/home" >
+                        <li class="nav-item my-1">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/coming" >
                                 Concept
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/home" >
+                        <li class="nav-item my-1">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/coming" >
                                 Contact
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/home" >
+                        <li class="nav-item  my-1">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/coming" >
                                 Team
                             </a>
                         </li>
                         
-                        <li class="nav-item" style="margin-left: 30px;">
+                       <!--  <li class="nav-item my-1" style="margin-left: 30px;">
                             <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none fs-7 p-2 m-1" [ngClass]="state3 == true ? 'isTrue' : 'isFalse' " (click)="setState3()"  routerLink="/login"  >
                                 Login
                             </a>
-                        </li>
+                        </li> -->
 
                         <li class="nav-item">
-                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/home" >
-                                <Button class="btn btn-data fs-7">Join us <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2   m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/login" >
+                                <Button class="btn btn-data fs-7">Login<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
                                   </svg></Button>
                             </a>
@@ -68,7 +68,7 @@
     
     
         <div class="d-xl-none">
-            <nav class=" navbar navbar-dark bg-header">
+            <nav class=" navbar navbar-dark bg-header fixed-top ">
                 <div class="container-fluid">
                     <div>
                         <a href="" class=" text-decoration-none px-2 text-white m-auto fs-1" >
@@ -97,38 +97,38 @@
                     </a>
                 </li>
                 <li class="nav-item pt-2">
-                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6 " data-bs-dismiss="offcanvas" aria-label="Close"  routerLink="/home" >
+                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6 " data-bs-dismiss="offcanvas" aria-label="Close"  routerLink="/coming" >
                         Resources
                     </a>
                 </li>
     
                 <li class="nav-item  pt-2">
-                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6   " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/home" >
+                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6   " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/coming" >
                         Concept
                     </a>
                 </li>
     
                 <li class="nav-item  pt-2">
-                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6 " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/home" >
+                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6 " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/coming" >
                         Contact
                     </a>
                 </li>
     
                 <li class="nav-item  pt-2">
-                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6  " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/home" >
+                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6  " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/coming" >
                         Team
                     </a>
                 </li>
                 
-                <li class="nav-item pt-4" >
+               <!--  <li class="nav-item pt-4" >
                     <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none  isFalse fs-6  " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/login" >
                         Login
                     </a>
-                </li>
+                </li> -->
                 
                 <li class="nav-item pt-2">
-                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6  " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/home" >
-                        <Button class="btn btn-data fs-6 ">Join us </Button>
+                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6  " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/login" >
+                        <Button class="btn btn-data fs-6 ">Login</Button>
                     </a>
                 </li>
                 
@@ -226,43 +226,43 @@
                 </div> 
                 <div class="navbar-content d-flex justify-content-end">
                     
-                    <ul class="nav">
-                        <li class="nav-item">
+                    <ul class="nav  my-1">
+                        <li class="nav-item my-1">
                             <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none fs-7 p-2 m-1" [ngClass]="state1 == true ? 'isTrue' : 'isFalse' "  (click)="setState1()"  routerLink="" >
                                Products
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/home" >
+                        <li class="nav-item my-1">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/coming" >
                                 Resources
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/home" >
+                        <li class="nav-item my-1">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/coming" >
                                 Concept
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/home" >
+                        <li class="nav-item my-1">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/coming" >
                                 Contact
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/home" >
+                        <li class="nav-item my-1">
+                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/coming" >
                                 Team
                             </a>
                         </li>
 
-                        <li class="nav-item" style="margin-left: 30px;">
+                        <li class="nav-item my-1" style="margin-left: 30px;">
                             <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none fs-7 p-2 m-1"  (click)="setState3()"  routerLink="/login"   [ngClass]="state2 == true ? 'isTrue' : 'isFalse' ">
                                <img src="{{objetounico.picture}}" width="30" alt="" style="border-radius: 20px;"> {{objetounico.given_name}}
                             </a>
                         </li>    
                         
-                        <li class="nav-item" style="margin-left: 30px;">
+                        <li class="nav-item my-1" style="margin-left: 30px;">
                             <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none fs-7 p-2 m-1" (click)="logout()"  routerLink="/home"   [ngClass]="state2 == true ? 'isTrue' : 'isFalse' ">
                                 Logout
                             </a>
@@ -277,7 +277,7 @@
     
     
         <div class="d-xl-none">
-            <nav class=" navbar navbar-dark bg-header">
+            <nav class=" navbar navbar-dark fixed-top  bg-header">
                 <div class="container-fluid">
                     <div>
                         <a href="" class=" text-decoration-none px-2 text-white m-auto fs-1" >
@@ -306,25 +306,25 @@
                     </a>
                 </li>
                 <li class="nav-item pt-2">
-                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6 " data-bs-dismiss="offcanvas" aria-label="Close"  routerLink="/home" >
+                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6 " data-bs-dismiss="offcanvas" aria-label="Close"  routerLink="/coming" >
                         Resources
                     </a>
                 </li>
     
                 <li class="nav-item  pt-2">
-                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6   " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/home" >
+                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6   " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/coming" >
                         Concept
                     </a>
                 </li>
     
                 <li class="nav-item  pt-2">
-                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6 " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/home" >
+                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6 " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/coming" >
                         Contact
                     </a>
                 </li>
     
                 <li class="nav-item  pt-2">
-                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6  " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/home" >
+                    <a href="" rel="noopener noreferrer" class="nav-item text-decoration-none isFalse fs-6  " data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/coming" >
                         Team
                     </a>
                 </li>
