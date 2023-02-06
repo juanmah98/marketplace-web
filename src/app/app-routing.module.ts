@@ -5,6 +5,7 @@ import { ComingSoonComponent } from './components/routs/coming-soon/coming-soon.
 import { GraphicTwoComponent } from './components/routs/graphic-two/graphic-two.component';
 import { GraphicComponent } from './components/routs/graphic/graphic.component';
 import { HomeComponent } from './components/routs/home/home.component';
+import { IndustryComponent } from './components/routs/industry/industry.component';
 import { LoginComponent } from './components/routs/login/login.component';
 import { TeamComponent } from './components/routs/team/team.component';
 
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'coming', component: ComingSoonComponent},
   {path: 'team', component: TeamComponent},
   {path: 'graphic2', component: GraphicTwoComponent},  
+  {path: 'industry', component: IndustryComponent},  
 
 ];
 
