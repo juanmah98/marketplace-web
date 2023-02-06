@@ -10,20 +10,20 @@
   </div>
     <div *ngIf="loading == true" class="pt-5 container-fluid" >
 
-      <div class="text-center row text-light pt-2 pb-3">
+      <div class="text-center row text-light pt-2 pb-3 bounce-in-top">
         <div class="d-flex col justify-content-center">       
-        <h1 class="fw-bold">Industry Insights Dashboard</h1>
+        <h1 class="fw-bold  pt-2">Industry Insights Dashboard</h1>
         <div class="mx-2"><img src="../../../../assets/Imagenes/Extras/icons8-gráfico-combinado-90.png" width="45px" alt=""></div>
       </div>
       </div>
 
-            <div class="text-center text-light pt-2">
-                <h2 *ngIf="change==false" class="fw-bold">One dataflow</h2>
-                <h2 *ngIf="change==true" class="fw-bold">Correlation</h2>
+            <div class="text-center text-light pt-2 fade-in">
+                <h2 *ngIf="change==false" class="fw-bold fade-in">One dataflow</h2>
+                <h2 *ngIf="change==true" class="fw-bold fade-in">Correlation</h2>
             </div>
 
-            <div class="row">
-                <div class="col-md-2 col-sm-6 ">
+            <div class="row " >
+                <div class="col-md-2 col-sm-6  fade-in">
                   <h6 class="m-1 text-light">Options</h6>
                     <button class="btn btn-primary m-1" (click)="change=false; cambio2()">One dataflow</button>
                     <button class="btn btn-light m-1" (click)="change=true; cambio()">Correlation</button>
@@ -35,13 +35,13 @@
                     
                     <div class="">
                         
-                        <div class="dropdown" >
+                        <div class="dropdown " >
                             <p>Legend</p>
                             <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                               Dropdown button
                             </button>
                             <ul class="dropdown-menu">
-                              <li  *ngFor="let name of names"><a class="dropdown-item">{{name}}</a></li>
+                              <li  *ngFor="let name of names"><a class="dropdown-item text-dark">{{name}}</a></li>
                              
                             </ul>
                           </div>
@@ -62,18 +62,18 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 text-end p-1"  *ngIf="change==false">
+            <div class="col-6 text-end p-1 fade-in"  *ngIf="change==false">
                 <button class="btn btn-light m-1" (click)="reload()">Reset</button>
             </div>
 
-            <div class="col-10 text-end p-1"  *ngIf="change==true">
+            <div class="col-10 text-end p-1 fade-in"  *ngIf="change==true">
               <button class="btn btn-light m-1" (click)="reload()">Reset</button>
           </div>
             </div>
 
             <!-- One dataflow -->
 
-            <div class="row pt-3 container-fluid pb-3" *ngIf="change==false">
+            <div class="row pt-3 container-fluid pb-3 fade-in" *ngIf="change==false">
                 <div class="col-2 rounded-2 p-3 ">
 
                   <div class="text-light mb-2"> 
@@ -225,7 +225,7 @@
 
 
             <!-- Correlation -->
-            <div class="row pt-3 container-fluid pb-3" *ngIf="change==true">
+            <div class="row pt-3 container-fluid pb-3 fade-in" *ngIf="change==true">
               <div class="col-2 rounded-2 p-3 ">
 
                 <div class="text-light mb-2"> 
