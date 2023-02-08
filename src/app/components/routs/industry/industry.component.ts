@@ -11,5 +11,6 @@ export class IndustryComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
 
 }
