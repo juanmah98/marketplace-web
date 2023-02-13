@@ -14,6 +14,7 @@ import { TeamComponent } from './team/team.component';
 import { ZingchartAngularModule } from 'zingchart-angular';
 import { GraphicTwoComponent } from './graphic-two/graphic-two.component';
 import { IndustryComponent } from './industry/industry.component';
+import { LearnMoreComponent } from './learn-more/learn-more.component';
 
 
 
@@ -26,7 +27,8 @@ import { IndustryComponent } from './industry/industry.component';
     ComingSoonComponent,
     TeamComponent,
     GraphicTwoComponent,
-    IndustryComponent
+    IndustryComponent,
+    LearnMoreComponent
   ],
   exports:[
     AnswersComponent

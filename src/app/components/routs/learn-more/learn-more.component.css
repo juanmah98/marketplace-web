@@ -1,0 +1,59 @@
+.bg-home{
+    background-color: var(--background-color-1);
+   
+    /* background-image: url("../img/fodno4.jpg"); */
+    background-size: cover;
+    background-attachment: fixed;
+   
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.bg-gift{
+  
+    background-image:  linear-gradient(rgba(6, 7, 28, 0.303), rgba(20, 20, 20, 0.308), rgba(8, 8, 8, 0.281)), url("../../../../assets/Imagenes/Fondos/learnmore2.png"); 
+    /* background-image: url("../img/fodno4.jpg"); */
+    
+/*     background-attachment: fixed; */
+    background-position: center;  
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.contenedor{
+    
+    position: relative;
+    display: inline-block;
+    
+}
+.texto-encima{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}  
+
+.bord{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+/* Grow Shadow */
+.hvr-grow-shadow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+   
+  }
+  .hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+    
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.092);
+    border-radius: 15px;
+  }
