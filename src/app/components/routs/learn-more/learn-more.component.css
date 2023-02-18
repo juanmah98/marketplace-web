@@ -1,5 +1,5 @@
 .bg-home{
-    background-color: var(--background-color-1);
+    background:  linear-gradient(rgba(0, 0, 0, 0.664), rgba(20, 20, 20, 0.658), rgba(8, 8, 8, 0.63)), url("../../../../assets/Imagenes/Fondos/fondo2.jpg");
    
     /* background-image: url("../img/fodno4.jpg"); */
     background-size: cover;
@@ -7,7 +7,45 @@
    
     background-repeat: no-repeat;
     width: 100%;
+   
 }
+
+.ref{
+    text-decoration:none;
+    background-color: unset;
+    
+}
+
+.hrflow{
+   position: absolute;
+   margin-top: 0px;
+   width:50px; 
+   margin-left: 15px;
+}
+
+.border-succes{
+    border-color: rgb(255, 255, 255) !important;
+}
+
+.border-danger{
+    border-color:var(--secondary) !important;
+}
+
+.btn-flow{
+    position: relative;
+    color: white;
+    border-color: rgba(255, 222, 173, 0);
+   display: inline-block;
+    
+}
+
+.btn-flow:hover{
+  
+    background-color: rgba(107, 107, 107, 0.078);
+    border-radius: 10px;
+    border-color: rgba(255, 222, 173, 0);
+}
+
 
 .bg-gift{
   
