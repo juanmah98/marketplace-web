@@ -70,6 +70,16 @@
  border-radius: 10px;
 }
 
+.border-primary{
+  width:35px; height:3px;
+  border-color:#ff4400 !important;
+}
+
+.border-secundary{
+  width:35px; height:3px;
+  border-color:#ffffff !important;
+}
+
 
 /* .bg-home3{
     background-color: rgb(32, 151, 255);
