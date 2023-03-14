@@ -83,6 +83,21 @@
 /* Fonts */
 
 @font-face {
+    font-family: 'Regular';
+    src: url("./assets/Fonts/OpenSans/OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Bold';
+    src: url("./assets/Fonts/OpenSans/OpenSans-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'Fit';
+    src: url("./assets/Fonts/OpenSans/OpenSans-Light.ttf");
+}
+
+@font-face {
     font-family: 'Bebas';
     src: url("./assets/Fonts/BebasNeue-Regular.otf");
 }

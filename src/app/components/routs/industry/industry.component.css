@@ -26,7 +26,17 @@
   }
 
   .fs-7{
-    font-size: 12px;
+    font-size: 16px;
+  }
+
+  .border-primary{
+    width:35px; height:3px;
+    border-color:#ff4400 !important;
+  }
+  
+  .border-secundary{
+    width:35px; height:3px;
+    border-color:#ffffff !important;
   }
   
   .btn-data{
