@@ -36,7 +36,7 @@
 
 
     /* // COLOR GREY// */
-    --primary:  #121212;  
+/*     --primary:  #121212;  
     --secondary: rgb(0, 183, 255);
 
     --background-color-1: #090909; 
@@ -53,7 +53,7 @@
     --primary-text: #E9ECEF; 
 
     --text-light: #E9ECEF; 
-    --text-dark: #212529; 
+    --text-dark: #212529;  */
 
       /* // COLOR GREY// */
       --primary:  #121212;  
@@ -81,6 +81,21 @@
 /* ---------------------------- */
 
 /* Fonts */
+
+@font-face {
+    font-family: 'Regular';
+    src: url("./assets/Fonts/OpenSans/OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Bold';
+    src: url("./assets/Fonts/OpenSans/OpenSans-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'Fit';
+    src: url("./assets/Fonts/OpenSans/OpenSans-Light.ttf");
+}
 
 @font-face {
     font-family: 'Bebas';

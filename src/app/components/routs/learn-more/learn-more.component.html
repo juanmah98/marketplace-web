@@ -1,0 +1,284 @@
+<body class="pt-5  bg-home" style="font-family: Regular;">
+
+    <div class="container-fluid pt-3 " >
+        <div class="pt-md-5 px-4 pt-sm-0" >
+                <div class="row pt-5 pb-5" data-aos="fade-down">
+                     <div class="col-4 text-center ">
+                        <img src="../../../../assets/Imagenes/Extras/figma/first.svg" class="w-100 move" alt="">
+                      
+                     </div>
+                    <div class="col-8 pb-3 ">
+                        <p class="fs-1">What is <b >FLOWKAI</b>?</p>
+                        <p class="fs-6 pt-1">
+                            Flowkai is a data market place  that connects you  high quality data whether you are a public or private institution. Flowkai platform can be used for  market search, product testing, survey, experiences and 
+                            <a class="collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo" style="color: var(--secondary); text-decoration: none;">more</a>
+                            
+                        </p>
+
+                        <div  id="accordionFlushExampleTwo">
+                            <div class="">                            
+                              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExampleTwo">
+                                <div class="accordion-body">Straight from the source in a democratic, easy and secure way.</div>
+                              </div>
+                            </div>
+                           
+                          </div>
+                    </div>
+                </div>
+                    <!-- contenedor -->
+            <div class="">
+              <!--   <div class="text-center">
+               <img class="" src="../../../../assets/Imagenes/Extras/graph2.png" alt="">
+            </div> -->
+            <!--  texto-encima -->
+               <div class=" pt-3 pb-5">
+                <div class="row pb-5">
+                    <div class="col-8 pt-3">
+                        <p class="fs-1">Why <b>FLOWKAI</b>?</p>
+                        <p class="fs-6 pt-1">
+                            FLOWKAI is your one-stop solution for all your market research needs. With real-time access to a vast repository of candidates, market data, including industry trends, competitor analysis, and consumer insights, you can stay ahead of the curve and make data-driven decisions for your business. 
+                            <a class=" collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" style="color: var(--secondary); text-decoration: none;">more</a>
+                        </p>
+
+                        <div  id="accordionFlushExample">
+                            <div class="">                            
+                              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Whether you're a small startup or a large corporation, government or academic institution our user-friendly platform allows you to easily navigate, customize your research ,find the right audience based upon complete personal profile and connect with the data you need to gain a competitive edge in today's market</div>
+                              </div>
+                            </div>
+                           
+                          </div>
+
+                    </div>    
+                    <div class="col-4 text-center">
+                        <img src="../../../../assets/Imagenes/Extras/figma/second.svg" class="w-100 move" alt="">
+                     </div>            
+                
+                    </div>
+
+                    <div class="row pt-5 pb-5 w-response">
+                        <p class="fs-1 text-center fw-bold pt-3" style="font-family: Bold;">Features</p>
+                        <div class="col-12 pb-5 pt-3 align-items-center d-inline-flex justify-content-center text-center ">
+                           <div>
+                               <button (click)="vista('1')" class="fs-5 btn btn-flow fw-bold  text-start">Flexibility</button>
+                               <hr *ngIf="a1!=true" class="hrflow border border-succes border-2 opacity-100">
+                               <hr *ngIf="a1!=false"  class="hrflow border border-danger border-2 opacity-100">
+                           </div>
+                     
+                           <div>
+                               <button  (click)="vista('2')" class="fs-5  btn btn-flow fw-bold text-start">Scalability</button>
+                               <hr *ngIf="a2!=true" class="hrflow border border-succes border-2 opacity-100">
+                               <hr *ngIf="a2!=false"  class="hrflow border border-danger border-2 opacity-100">
+                           </div>
+                       
+                         <div>
+                             <button  (click)="vista('3')" class="fs-5  btn btn-flow fw-bold text-start">Trust</button>
+                             <hr *ngIf="a3!=true" class="hrflow border border-succes border-2 opacity-100">
+                             <hr *ngIf="a3!=false"  class="hrflow border border-danger border-2 opacity-100">
+                         </div>
+
+                         <div>
+                             <button  (click)="vista('4')" class="fs-5 btn btn-flow fw-bold  text-start">Agile</button>                   
+                             <hr *ngIf="a4!=true" class="hrflow border border-succes border-2 opacity-100">
+                             <hr *ngIf="a4!=false"  class="hrflow border border-danger border-2 opacity-100">
+                         </div>
+
+                         <div>
+                             <button  (click)="vista('5')" class="fs-5 btn btn-flow fw-bold  text-start">Ethical</button>
+                             <hr *ngIf="a5!=true" class="hrflow border border-succes border-2 opacity-100">
+                             <hr *ngIf="a5!=false"  class="hrflow border border-danger border-2 opacity-100">
+                         </div>
+                        
+                         <div>
+                             <button  (click)="vista('6')" class="fs-5 btn btn-flow fw-bold text-start">Secure</button>
+                             <hr *ngIf="a6!=true" class="hrflow border border-succes border-2 opacity-100">
+                             <hr *ngIf="a6!=false"  class="hrflow border border-danger border-2 opacity-100">
+                         </div>
+
+                         <div>
+                             <button  (click)="vista('7')" class="fs-5 btn btn-flow fw-bold text-start">More</button>
+                             <hr *ngIf="a7!=true" class="hrflow border border-succes border-2 opacity-100">
+                             <hr *ngIf="a7!=false"  class="hrflow border border-danger border-2 opacity-100">
+                         </div>
+
+                        </div>
+
+                        <div class="col-12"> 
+
+                            <!-- Flexibility -->
+                            <div *ngIf="a1!=false"  class="row container">
+                                <div class="col-3 text-center justify-content-center">
+                                    <img src="../../../../assets/Imagenes/Extras/figma/image1.svg" class="w-100" alt="">
+                                </div>
+                                <div class="col-9">
+                            <p >
+                               Flowkai brings adaptable solutions for growing businesses. Access the flowkai service and product, custom and combine them to obtain the latest market insights or maximize your market research, no matter the size of your company. With flexible options, you can easily expand and adapt as your needs change. 
+                                <br><br>
+                                click <a href="" style="text-decoration: none; color: var(--secondary);"><b>Products</b></a> to learn more
+                            </p>
+                              </div>
+                            </div>
+
+                            <!-- Scalability -->
+                            <div *ngIf="a2!=false"  class="row container">
+                                <div class="col-3 text-center">
+                                    <img src="../../../../assets/Imagenes/Extras/figma/image2.svg" class="w-100"  alt="">
+                                </div>
+                                <div class="col-9">
+                            <p >
+                                Flowkai brings adaptable solutions for growing businesses. Access the flowkai service and product, custom and combine them to obtain the latest market insights or maximize your market research, no matter the size of your company. With flexible options, you can easily expand and adapt as your needs change. 
+                                
+                                <a class="collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapseTrhee" aria-expanded="false" aria-controls="flush-collapseTrhee" style="color: var(--secondary); text-decoration: none;">more</a>
+                            
+                            </p>
+    
+                            <div  id="accordionFlushExampleTrhee">
+                                <div class="">                            
+                                  <div id="flush-collapseTrhee" class="accordion-collapse collapse" aria-labelledby="flush-headingTrhee" data-bs-parent="#accordionFlushExampleTrhee">
+                                    <div class="accordion-body">Don't have a market research team in-house? No problem. Flowkai provides a solution. Outsource your market research needs to top experts in our marketplace. With a wealth of talent at your fingertips, you can easily find the right researcher for your project and get the insights you need to make informed business decisions. Whether your company is small or large, flowkai makes market research accessible and hassle-free.</div>
+                                  </div>
+                                </div>
+                               
+                              </div>
+                                </div>
+                            </div>
+
+                             <!-- Trust -->
+                            <div *ngIf="a3!=false"  class="row container">
+                                <div class="col-3 text-center">
+                                    <img src="../../../../assets/Imagenes/Extras/figma/image3.svg" class="w-100"  alt="">
+                                </div>
+                                <div class="col-9">
+                            <p >
+                                Rely on our rigorous validation processes to ensure the accuracy, Integrity, consistency and reliability of our data sources. Trust in the quality of our data sources, backed by our commitment to providing only the most trustworthy and validated sources whether is business, institutions or people.
+                            </p>
+                                </div>
+                            </div>
+
+                            
+                            <!-- Agile -->
+                            <div *ngIf="a4!=false"  class="row container">
+                                <div class="col-3 text-center">
+                                    <img src="../../../../assets/Imagenes/Extras/figma/image4.svg" class="w-100"  alt="">
+                                </div>
+                                <div class="col-9">
+                            <p >
+                                With just a few clicks, you can harness the power of your research  to get meaningful insights and reach a broader audience. Whether you want to create a process to test your product, gather feedback on user experience, rebuild your relationship with existing clients or conduct market research, our platform makes it easy and fast.
+                                <a class="collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour" style="color: var(--secondary); text-decoration: none;">more</a>
+                            
+                            </p>
+    
+                            <div  id="accordionFlushExampleFour">
+                                <div class="">                            
+                                  <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExampleFour">
+                                    <div class="accordion-body">Companies and researchers can find the right target participants , connect with them and offer various incentives such as gift cards, airline miles, cash, discounts, and more. 
+                                        Flowkai allows you to custom design your research, reuse templates, outsource and work with the same pool of participants. 
+                                        Streamlining your research has never been easier!</div>
+                                  </div>
+                                </div>
+                               
+                              </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Ethical -->
+                            <div *ngIf="a5!=false"  class="row container">
+                                <div class="col-3 text-center">
+                                    <img src="../../../../assets/Imagenes/Extras/figma/image5.svg" class="w-100"  alt="">
+                                </div>
+                                <div class="col-9">
+                            <p >
+                                At Flowkai, we believe in empowering our users while ensuring that data is collected in an ethical and fair manner without compromising privacy.
+                                <a class="collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive" style="color: var(--secondary); text-decoration: none;">more</a>
+                            </p>
+    
+                            <div  id="accordionFlushExampleFive">
+                                <div class="">                            
+                                  <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExampleFive">
+                                    <div class="accordion-body">Our platform is designed to respect the privacy and autonomy of participants, and let the users decide what they want to share and when they want to share it. Whether you're conducting market research, gathering feedback, or testing your product, you can trust that we prioritize ethics and fairness in every aspect of our work</div>
+                                  </div>
+                                </div>
+                               
+                              </div>
+                            </div>
+                        </div>
+
+                        <!-- Secure -->
+                        <div *ngIf="a6!=false"  class="row container">
+                            <div class="col-3 text-center">
+                                <img src="../../../../assets/Imagenes/Extras/figma/image6.svg" class="w-100"  alt="">
+                            </div>
+                            <div class="col-9">
+                            <p >
+                                At FLOWKAI, we prioritize the privacy and security of our users' personal information. To achieve this, we take an ethical approach to data collection and management, implementing rigorous de-identification and encryption processes. Our practices are in full compliance with all relevant privacy and personal information laws. When you use our products, you can trust that we will handle users data with care and respect, and only use it for the purposes outlined in our Privacy Policy.
+                                <br><br>
+                                click <a href="" style="text-decoration: none; color: var(--secondary);"><b>Learn More</b></a> to know more about our de-identification process
+                            </p>
+                            </div>
+                        </div>
+
+                        <!-- More -->
+                        <div *ngIf="a7!=false"  class="row container">
+                            <div class="col-3 text-center justify-content-center">
+                                <img src="../../../../assets/Imagenes/Extras/figma/image7.svg" class="w-100"  alt="">
+                            </div>
+                            <div class="col-9">
+                            <p >
+                                Flowkai allows researchers and companies to create, admin polls, survey or create your custom request to get opinions, ideas, feedback and real data from the right audience in exchange for rewards. whether you are looking for:
+                            </p>
+
+                            <ul>
+                                <li>new audience </li>
+                                <li>rebuild your relationship with existing clients </li>
+                                <li>B2B researches</li>
+                                <li>research & D&A outsourcing</li>
+                            </ul>
+
+                            <p>
+                                click  <a href="" style="text-decoration: none; color: var(--secondary);"><b>How FLOWKAI works</b></a> to learn more 
+                            </p>
+                           
+                            </div>
+                        </div>
+
+                        </div>
+                    </div> 
+                </div>
+                   
+
+
+                  <div class="row pt-5 pb-3">
+                    <div class="col-12 text-center text-dark">
+                        <p class="fs-2 fw-bold">
+                            Take your research to a whole new level with Flowkai
+                        </p>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="text-dark text-center">
+                            <p class="fs-5">
+                                To know more about us, our products and get early access click below 
+                            </p>
+                            <button class="btn btn-data fs-7 p-2" style="font-family: Patron;"> Join Waitlist </button>
+                        </div>
+                    </div>
+                </div>
+
+               
+
+                <div class="row">
+
+
+                    
+                </div>
+
+                </div>
+
+              
+                   
+        </div>
+    </div>
+
+   
+</body>
