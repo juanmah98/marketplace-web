@@ -1,37 +1,36 @@
+.bg-homedata{
+   /*  background: linear-gradient(to bottom, rgb(12, 14, 21), rgb(37, 43, 66) ); */
+/*    background-image: linear-gradient( #ff0000, #00ff00), url("../../../../assets/Imagenes/Fondos/back2.png"); */
+   background-color: #000000;
+   /* background-image:  linear-gradient(rgba(6, 7, 28, 0.514), rgba(20, 20, 20, 0.558), rgba(8, 8, 8, 0.6)), url("../../../../assets/Imagenes/Fondos/home.jpg"); */
+   background-image:  linear-gradient( rgba(12, 14, 21, 0.685), rgba(20, 20, 20, 0.723), rgba(37, 43, 66, 0.86)), url("../../../../assets/Imagenes/Fondos/back.png");
+   /* background-image: url("../img/fodno4.jpg"); */
+   background-size: cover;
+   background-attachment: fixed;
+  
+   background-repeat: no-repeat;
+   width: 100%;
+   height: 110vh;
+  
+   
+    
+   
+    
+}
+
+.res{
+    
+        background: linear-gradient(to right, rgb(12, 14, 21), rgb(37, 43, 66));
+        /* background-image:   url("../../../../assets/Imagenes/Fondos/principal.PNG"); */
+        /* background-image: url("../img/fodno4.jpg"); */
+        
+       
+        
+  
+}
+
 /* Color de fondo e imagenes */
-.bg-home{
-    background-color: #000000;
-      /* background-image:  linear-gradient(rgba(6, 7, 28, 0.514), rgba(20, 20, 20, 0.558), rgba(8, 8, 8, 0.6)), url("../../../../assets/Imagenes/Fondos/home.jpg"); */
-      background-image:  linear-gradient(rgba(6, 7, 28, 0.955), rgba(20, 20, 20, 0.823), rgba(8, 8, 8, 0.916)), url("../../../../assets/Imagenes/Fondos/home.jpg");
-      /* background-image: url("../img/fodno4.jpg"); */
-      background-size: cover;
-      background-attachment: fixed;
-     
-      background-repeat: no-repeat;
-      width: 100%;
-      
-     
-  }
 
-  
-
-.bg-home2{
-   
-    background-color: var(--background-color-2);
-    position: relative;
-    background-attachment: fixed;
-   
-  
-}
-
-.bg-home3{
-   
-  background-color: var(--background-color-3);
-  position: relative;
-  background-attachment: fixed;
- 
-
-}
 
 .btn-data{
   background-color: var(--secondary);
@@ -43,15 +42,7 @@
   color: white;
 }
 
-.bg-home1{
-    background: linear-gradient(to bottom, rgb(37, 43, 66), rgb(12, 14, 21));
-    /* background-image:   url("../../../../assets/Imagenes/Fondos/principal.PNG"); */
-    /* background-image: url("../img/fodno4.jpg"); */
- 
-    width: 100%;
-    height: 110vh;
-    
-}
+
 
 .bg-gift{
   background-color: #000000;
@@ -153,7 +144,7 @@
   }
 
   .transp{
-    background-color: var(--background-color-1);
+    background-color: #252b42a2;
     border-color: var(--secondary);
     color: var(--secondary);
   }

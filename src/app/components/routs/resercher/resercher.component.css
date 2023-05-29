@@ -1,0 +1,20 @@
+.bg-home2{
+    background: linear-gradient(to bottom, rgb(12, 14, 21), rgb(37, 43, 66));
+    /* background-image:   url("../../../../assets/Imagenes/Fondos/principal.PNG"); */
+    /* background-image: url("../img/fodno4.jpg"); */
+   
+    
+   
+    
+}
+
+.res{
+    
+        background: linear-gradient(to right, rgb(12, 14, 21), rgb(37, 43, 66));
+        /* background-image:   url("../../../../assets/Imagenes/Fondos/principal.PNG"); */
+        /* background-image: url("../img/fodno4.jpg"); */
+        
+       
+        
+  
+}

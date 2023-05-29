@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Historical } from 'src/app/interfaces/historical';
+import { ApraService } from 'src/app/services/apra.service';
 import { GraphicService } from 'src/app/services/graphic.service';
 import { __values } from 'tslib';
 
@@ -13,13 +15,28 @@ export class GraphicTwoComponent implements OnInit {
   loading:boolean = false;
   names:string[] = [];
   switch:boolean=false;
+  historical: Historical[]=[];
+  
+ 
+  
+  arre:any[] = [];
+  arre2:any[] = [];
 
-  constructor(private graphicServices: GraphicService,) {}
 
-  ngOnInit(): void {
+  constructor(private graphicServices: GraphicService, private _HistoricalService : ApraService) {}
 
+  async ngOnInit(): Promise<void> {
+
+   await this.getHistoricalAll()
+   
     setTimeout(() => {
       this.loading = true
+      console.log(this.historical[0]['Institution Name'])
+
+     
+     /*   this.asd[0].values=[this.arre,this.arre2];  */
+      console.log("this.asd")
+      console.log(this.asd)
       },1000)
 
        this.multi.forEach( b => {
@@ -29,7 +46,43 @@ export class GraphicTwoComponent implements OnInit {
       console.log(this.names)
   }
   
-   
+  getHistoricalAll(){
+    this._HistoricalService.getHistorical().subscribe({
+      next: (data: any) => {
+        console.log("Response");
+        console.log(data);
+        this.historical=data;
+        let i = 0
+        this.historical.forEach(element => {
+          if(i<10){
+            this.arre2[i++]=element.ABN;
+            let fechaString = element.Period;
+            let fecha = new Date(fechaString);
+            let anio = fecha.getFullYear();
+            this.arre[i++] = anio         
+            this.asd[0].values[i++]=[anio,element.ABN]
+            this.asd[0].text=element['Institution Name']
+          }
+          
+          });
+          console.log(this.arre)
+        },
+      error: (err:any) => {
+        console.log('Error de peticion');
+        console.log(err);
+      },
+      complete: () => {
+        console.log('La peticion termino')
+      }
+      
+    })
+  }
+  asd:any = [ {
+    values: [],
+    text: 'Nissan',
+    scales: 'scale-x, scale-y',
+  },]
+  
 axis2?:boolean;
 yaxis2?:string;
 
@@ -143,9 +196,11 @@ yaxis2?:string;
       aspect: 'spline'
     },
     
-    series: this.multi,
+    series: this.asd,
     
   };
+  
+ 
 
 cambio(){
   this.axis2 = false;
