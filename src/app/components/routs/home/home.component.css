@@ -13,6 +13,45 @@
      
   }
 
+  .carousel-controls {
+    position: relative;
+  }
+  
+  .carousel-indicators {
+    position: absolute;
+    bottom: -15px; /* Ajusta esta propiedad para cambiar la posición vertical de los indicadores */
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+  }
+
+  
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .carousel-control-prev {
+    left: 35%; /* Ajusta esta propiedad para cambiar la posición horizontal de la flecha previa */
+  }
+  
+  .carousel-control-next {
+    right: 35%; /* Ajusta esta propiedad para cambiar la posición horizontal de la flecha siguiente */
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    /* Estilos adicionales para las flechas, si es necesario */
+  }
+  .w-response{
+    height: 600px;
+}
   
 
 .bg-home2{
@@ -49,7 +88,7 @@
     /* background-image: url("../img/fodno4.jpg"); */
  
     width: 100%;
-    height: 110vh;
+    height: 120vh;
     
 }
 

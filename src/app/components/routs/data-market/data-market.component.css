@@ -147,12 +147,20 @@
     background-color: #252b42a2;
     border-color: var(--secondary);
     color: var(--secondary);
+    border-radius: 10px;
+  }
+  .transpblanc{
+    background-color: #ffffffac;
+    border-color: white;
+    color: black;
+    border-radius: 10px;
   }
 
   .blue{
-    background-color: var(--secondary);
+    background-color: #23a5f09d;
     border-color: var(--secondary);
     color: white;
+    border-radius: 10px;
   }
 
   .btn-more{

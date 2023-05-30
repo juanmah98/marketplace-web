@@ -18,3 +18,21 @@
         
   
 }
+
+.activ{
+
+    background: linear-gradient(to bottom,  rgba(19, 23, 34, 0),rgba(21, 80, 133, 1));
+    padding-top: 3%;
+    padding-bottom: 2%;
+}
+
+.inactive{
+    background: none;
+    padding-top: 3%;
+    padding-bottom: 2%;
+}
+
+.line{
+    width:35px; height:3px;
+    border-color:#ffffff !important;
+  }
