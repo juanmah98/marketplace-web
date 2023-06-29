@@ -1,35 +1,44 @@
 export interface Monthly {
-    ABN:                                             number;
-    Acceptances:                                     number;
-    "Cash and deposits with financial institutions": number;
-    "Deposits by community service organisations":   number;
-    "Deposits by financial institutions":            number;
-    "Deposits by general government":                number;
-    "Deposits by households":                        number;
-    "Deposits by non-financial businesses":          number;
-    "Institution Name":                              string;
-    "Intra-group deposits":                          number | null;
-    "Intra-group loans and finance leases":          number | null;
-    "Investment securities":                         number;
-    "Loans to community service organisations":      number;
-    "Loans to financial institutions":               number;
-    "Loans to general government":                   number;
-    "Loans to households: Credit cards":             number;
-    "Loans to households: Housing: Investment":      number;
-    "Loans to households: Housing: Owner-occupied":  number;
-    "Loans to households: Other":                    number;
-    "Loans to non-financial businesses":             number;
-    "Negotiable Certificates of Deposit":            number | null;
-    "Net acceptances of customers":                  number;
-    "Period ":                                       Period;
-    "Total long-term borrowings":                    number;
-    "Total residents assets":                        number;
-    "Total residents deposits":                      number;
-    "Total residents loans and finance leases":      number;
-    "Total securitised assets on balance sheet":     number;
-    "Total short-term borrowings":                   number;
-    "Trading securities":                            number;
-    index:                                           number;
+    __values__: Values[];
+}
+
+export interface Values {
+    ABN:      number;
+    __data__: Data[];
+}
+
+export interface Data {
+    abn:                                           number;
+    acceptances:                                   number;
+    cash_and_deposits_with_financial_institutions: number;
+    deposits_by_community_service_organisations:   number;
+    deposits_by_financial_institutions:            number;
+    deposits_by_general_government:                number;
+    deposits_by_households:                        number;
+    "deposits_by_non-financial_businesses":        number;
+    index:                                         number;
+    institution_name:                              string;
+    "intra-group_deposits":                        number | null;
+    "intra-group_loans_and_finance_leases":        number | null;
+    investment_securities:                         number;
+    loans_to_community_service_organisations:      number;
+    loans_to_financial_institutions:               number;
+    loans_to_general_government:                   number;
+    loans_to_households_credit_cards:              number;
+    loans_to_households_housing_investment:        number;
+    "loans_to_households_housing_owner-occupied":  number;
+    loans_to_households_other:                     number;
+    "loans_to_non-financial_businesses":           number;
+    negotiable_certificates_of_deposit:            number | null;
+    net_acceptances_of_customers:                  number;
+    period:                                        Period;
+    "total_long-term_borrowings":                  number;
+    total_residents_assets:                        number;
+    total_residents_deposits:                      number;
+    total_residents_loans_and_finance_leases:      number;
+    total_securitised_assets_on_balance_sheet:     number;
+    "total_short-term_borrowings":                 number;
+    trading_securities:                            number;
 }
 
 export enum Period {

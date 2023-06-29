@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Datos } from 'src/app/interfaces/graphicTwo';
 import { Historical } from 'src/app/interfaces/historical';
 import { ApraService } from 'src/app/services/apra.service';
 import { GraphicService } from 'src/app/services/graphic.service';
@@ -15,29 +16,57 @@ export class GraphicTwoComponent implements OnInit {
   loading:boolean = false;
   names:string[] = [];
   switch:boolean=false;
-  historical: Historical[]=[];
+  historical?: Historical;
   
- 
+ nuevoDatos: Datos = {
+    values: [],
+    text: '',
+    scales: 'scale-x, scale-y'
+  };
+
+  nuevoDatos2: any[] = [];
+
+  nuevoDatos3: Datos = {
+    values: [],
+    text: '',
+    scales: 'scale-x, scale-y'
+  };
+
+  nuevoDatos4: Datos = {
+    values: [],
+    text: '',
+    scales: 'scale-x, scale-y'
+  };
+
+  nuevoDatos5: Datos[] = [{
+    values: [],
+    text: '',
+    scales: 'scale-x, scale-y'
+  }];
+  
   
   arre:any[] = [];
   arre2:any[] = [];
+  arre3:any[] = [];
 
 
   constructor(private graphicServices: GraphicService, private _HistoricalService : ApraService) {}
 
   async ngOnInit(): Promise<void> {
 
+
+
    await this.getHistoricalAll()
    
-    setTimeout(() => {
-      this.loading = true
-      console.log(this.historical[0]['Institution Name'])
+    /* setTimeout(() => { */
+     
+     
 
      
-     /*   this.asd[0].values=[this.arre,this.arre2];  */
-      console.log("this.asd")
-      console.log(this.asd)
-      },1000)
+     /*   this.arregloGrafico[0].values=[this.arre,this.arre2];  */
+      console.log("this.arregloGrafico")
+      console.log(this.arregloGrafico)
+     /*  },1000) */
 
        this.multi.forEach( b => {
        this.names[this.names.length] = b.text      
@@ -48,24 +77,86 @@ export class GraphicTwoComponent implements OnInit {
   
   getHistoricalAll(){
     this._HistoricalService.getHistorical().subscribe({
-      next: (data: any) => {
+      /*Obtenemos los datos mediante el servicio*/
+      next: (data: Historical) => {
         console.log("Response");
         console.log(data);
         this.historical=data;
-        let i = 0
-        this.historical.forEach(element => {
-          if(i<10){
-            this.arre2[i++]=element.ABN;
-            let fechaString = element.Period;
-            let fecha = new Date(fechaString);
-            let anio = fecha.getFullYear();
-            this.arre[i++] = anio         
-            this.asd[0].values[i++]=[anio,element.ABN]
-            this.asd[0].text=element['Institution Name']
-          }
-          
+        
+        
+        
+        /*RECORREMOS TODOS EL OBJETO PARA APLICAR FILTRADO*/
+        console.log("foreach")
+        this.historical.__values__.forEach(element => {
+          let i = 0
+       
+          this.nuevoDatos2 = [];
+
+          element.__data__.forEach(element2 => {
+           /*METODO PARA TRANSFORMAR LA FECHA DE CADA ELEMENTO*/
+            const fechaString = element2.period
+            const fecha = new Date(fechaString);
+            const anio = fecha.getFullYear();
+            const mes = fecha.getMonth() + 1;
+            
+
+            const fechaCompleta = `${mes}/${anio}`;
+
+             /*GUARDAMOS EN UN ARREGLO NEUVO LOS DATOS CON EL FORMATO
+             PARA MOSTRAR LOS DATOS EN EL CHART (grafico) FECHA, VALOR*/
+            this.nuevoDatos2[i++]=[fechaCompleta,element2.cash_and_liquid_assets]
+            /* console.log("este es i" + i) */
+            
+          }); 
+           /*METODO PARA ORDENAR CADA ELEMENTO DE MENOR A MAYOR POR FECHAS*/
+          const uniqueArreglo:any = [];
+          const variableSet = new Set();
+
+          this.nuevoDatos2.forEach(item => {
+            const variable = item[0];
+            if (!variableSet.has(variable)) {
+              uniqueArreglo.push(item);
+              variableSet.add(variable);
+            }
           });
-          console.log(this.arre)
+          
+          uniqueArreglo.sort((a:any, b:any) => {
+            const dateA = this.parseDate(a[0]);
+            const dateB = this.parseDate(b[0]);
+            return dateA.getTime() - dateB.getTime();
+});
+        /*GUARDAMOS TODO LOS VALORES EN UN ARREGLO NUEVO, QUE SERA CON EL QUE LUEGO PASAREMOS AL ARREGLO DEL GRAFICO*/
+          this.nuevoDatos5.push({
+            values:uniqueArreglo,
+            text:element.__data__[0].institution_name,
+            scales: 'scale-x, scale-y'
+          });  
+       
+        });
+
+        console.log("this.arre DATOS5")
+        console.log(this.nuevoDatos5)
+       
+        /* CON UN FOREACH SE PUEDEN GUARDAR TODOS LOS ELEMENTOS EN EL ARREGLO DEL GRAFICO */
+      
+           /*  this.nuevoDatos5.forEach(element2 => {
+           
+              this.arregloGrafico.push(element2);
+             
+            }); 
+             */
+
+            /* GUARDAMOS ALGUNSO ELEMENTOS UNICAMENTE */
+
+            this.arregloGrafico.push(this.nuevoDatos5[1]);
+            this.arregloGrafico.push(this.nuevoDatos5[2]);
+            this.arregloGrafico.push(this.nuevoDatos5[3]);
+            this.arregloGrafico.push(this.nuevoDatos5[4]);
+            this.arregloGrafico.push(this.nuevoDatos5[5]);
+            this.arregloGrafico.push(this.nuevoDatos5[6]);
+            this.arregloGrafico.push(this.nuevoDatos5[8]);
+         
+            this.loading = true
         },
       error: (err:any) => {
         console.log('Error de peticion');
@@ -77,11 +168,13 @@ export class GraphicTwoComponent implements OnInit {
       
     })
   }
-  asd:any = [ {
-    values: [],
-    text: 'Nissan',
-    scales: 'scale-x, scale-y',
-  },]
+
+  parseDate(dateString:any) {
+    const [month, year] = dateString.split('/');
+    const lastDayOfMonth = new Date(parseInt(year), parseInt(month), 0).getDate();
+    return new Date(parseInt(year), parseInt(month) - 1, lastDayOfMonth);
+  }
+  arregloGrafico:any = []
   
 axis2?:boolean;
 yaxis2?:string;
@@ -196,7 +289,7 @@ yaxis2?:string;
       aspect: 'spline'
     },
     
-    series: this.asd,
+    series: this.arregloGrafico,
     
   };
   
