@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Datos } from 'src/app/interfaces/graphicTwo';
 import { Historical } from 'src/app/interfaces/historical';
 import { ApraService } from 'src/app/services/apra.service';
 import { GraphicService } from 'src/app/services/graphic.service';
 import { __values } from 'tslib';
+import { ZingchartAngularComponent } from 'zingchart-angular';
+import { AfterViewChecked } from '@angular/core';
 
 @Component({
   selector: 'app-graphic-two',
@@ -17,6 +19,7 @@ export class GraphicTwoComponent implements OnInit {
   names:string[] = [];
   switch:boolean=false;
   historical?: Historical;
+  @ViewChild('myChart', { static: false }) chart?: ZingchartAngularComponent;
   
  nuevoDatos: Datos = {
     values: [],
@@ -24,7 +27,7 @@ export class GraphicTwoComponent implements OnInit {
     scales: 'scale-x, scale-y'
   };
 
-  nuevoDatos2: any[] = [];
+  arregloAyuda: any[] = [];
 
   nuevoDatos3: Datos = {
     values: [],
@@ -38,7 +41,7 @@ export class GraphicTwoComponent implements OnInit {
     scales: 'scale-x, scale-y'
   };
 
-  nuevoDatos5: Datos[] = [{
+  arregloDatos: Datos[] = [{
     values: [],
     text: '',
     scales: 'scale-x, scale-y'
@@ -76,6 +79,8 @@ export class GraphicTwoComponent implements OnInit {
   }
   
   getHistoricalAll(){
+    this.arregloGrafico.splice(0, this.arregloGrafico.length);
+    this.arregloDatos.splice(0, this.arregloDatos.length);
     this._HistoricalService.getHistorical().subscribe({
       /*Obtenemos los datos mediante el servicio*/
       next: (data: Historical) => {
@@ -90,7 +95,7 @@ export class GraphicTwoComponent implements OnInit {
         this.historical.__values__.forEach(element => {
           let i = 0
        
-          this.nuevoDatos2 = [];
+          this.arregloAyuda = [];
 
           element.__data__.forEach(element2 => {
            /*METODO PARA TRANSFORMAR LA FECHA DE CADA ELEMENTO*/
@@ -104,7 +109,7 @@ export class GraphicTwoComponent implements OnInit {
 
              /*GUARDAMOS EN UN ARREGLO NEUVO LOS DATOS CON EL FORMATO
              PARA MOSTRAR LOS DATOS EN EL CHART (grafico) FECHA, VALOR*/
-            this.nuevoDatos2[i++]=[fechaCompleta,element2.cash_and_liquid_assets]
+            this.arregloAyuda[i++]=[fechaCompleta,element2.cash_and_liquid_assets]
             /* console.log("este es i" + i) */
             
           }); 
@@ -112,7 +117,7 @@ export class GraphicTwoComponent implements OnInit {
           const uniqueArreglo:any = [];
           const variableSet = new Set();
 
-          this.nuevoDatos2.forEach(item => {
+          this.arregloAyuda.forEach(item => {
             const variable = item[0];
             if (!variableSet.has(variable)) {
               uniqueArreglo.push(item);
@@ -126,7 +131,7 @@ export class GraphicTwoComponent implements OnInit {
             return dateA.getTime() - dateB.getTime();
 });
         /*GUARDAMOS TODO LOS VALORES EN UN ARREGLO NUEVO, QUE SERA CON EL QUE LUEGO PASAREMOS AL ARREGLO DEL GRAFICO*/
-          this.nuevoDatos5.push({
+          this.arregloDatos.push({
             values:uniqueArreglo,
             text:element.__data__[0].institution_name,
             scales: 'scale-x, scale-y'
@@ -135,11 +140,11 @@ export class GraphicTwoComponent implements OnInit {
         });
 
         console.log("this.arre DATOS5")
-        console.log(this.nuevoDatos5)
+        console.log(this.arregloDatos)
        
         /* CON UN FOREACH SE PUEDEN GUARDAR TODOS LOS ELEMENTOS EN EL ARREGLO DEL GRAFICO */
       
-           /*  this.nuevoDatos5.forEach(element2 => {
+           /*  this.arregloDatos.forEach(element2 => {
            
               this.arregloGrafico.push(element2);
              
@@ -148,13 +153,13 @@ export class GraphicTwoComponent implements OnInit {
 
             /* GUARDAMOS ALGUNSO ELEMENTOS UNICAMENTE */
 
-            this.arregloGrafico.push(this.nuevoDatos5[1]);
-            this.arregloGrafico.push(this.nuevoDatos5[2]);
-            this.arregloGrafico.push(this.nuevoDatos5[3]);
-            this.arregloGrafico.push(this.nuevoDatos5[4]);
-            this.arregloGrafico.push(this.nuevoDatos5[5]);
-            this.arregloGrafico.push(this.nuevoDatos5[6]);
-            this.arregloGrafico.push(this.nuevoDatos5[8]);
+            this.arregloGrafico.push(this.arregloDatos[1]);
+            this.arregloGrafico.push(this.arregloDatos[2]);
+            this.arregloGrafico.push(this.arregloDatos[3]);
+            this.arregloGrafico.push(this.arregloDatos[4]);
+            this.arregloGrafico.push(this.arregloDatos[5]);
+            this.arregloGrafico.push(this.arregloDatos[6]);
+            this.arregloGrafico.push(this.arregloDatos[8]);
          
             this.loading = true
         },
@@ -350,8 +355,49 @@ cambio2(){
    }
 
 
+   chart1(n:number){
+    this.arregloGrafico.splice(0, this.arregloGrafico.length);
+    let i=0
+      this.arregloDatos.forEach(element2 => {
 
+        switch (n) {
+          case 1:
+            if(i<10){
+             
+              this.arregloGrafico.push(element2);
+            }
+            break;
+          case 2:
+            if(i>10 && i<=20){
+             
+              this.arregloGrafico.push(element2);
+            }
+            break;
+         
+          default:
+            console.log('Selecciona una opción');
+            break;
+        }
 
+        i++;
+             
+    }); 
+             
+    this.reloadChart();
+    console.log(this.arregloGrafico)
+    console.log("reset")
+   }
+
+ 
+  
+  renderChart: boolean = true;
+
+  reloadChart() {
+    this.renderChart = false;
+    setTimeout(() => {
+      this.renderChart = true;
+    }, 0);
+  }
 /*    get multi(){
       return this.graphicServices.datosData
    } */

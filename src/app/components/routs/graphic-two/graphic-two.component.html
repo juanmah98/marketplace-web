@@ -52,11 +52,11 @@
                         <div class="dropdown">
                             <p>Legend Selection</p>
                             <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Dropdown button
+                              View 10 banks
                             </button>
                             <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" (click)="switch=false">Chart 1</a></li>
-                              <li><a class="dropdown-item"  (click)="switch=false">Chart 2</a></li>                              
+                              <li><a class="dropdown-item" (click)="chart1(1)">Chart 1</a></li>
+                              <li><a class="dropdown-item"  (click)="chart1(2)">Chart 2</a></li>                              
                             </ul>
                           </div>
                     </div>
@@ -214,9 +214,9 @@
                     
 
                 </div>
-                <div class="col-10 bg-l">
-                    <div class="">
-                        <zingchart-angular [config]="config2" [height]="500"></zingchart-angular>
+                <div class="col-10 bg-l" >
+                    <div class="" *ngIf="renderChart">
+                        <zingchart-angular id="myChart" [config]="config2" [height]="500"></zingchart-angular>
                        </div>
                 </div>
             </div>
