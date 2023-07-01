@@ -1,12 +1,9 @@
-.bg-home2{
+body{ 
     background: linear-gradient(to bottom, rgb(12, 14, 21), rgb(37, 43, 66));
-    /* background-image:   url("../../../../assets/Imagenes/Fondos/principal.PNG"); */
-    /* background-image: url("../img/fodno4.jpg"); */
    
-    
-   
-    
 }
+
+
 
 .res{
     
@@ -35,4 +32,67 @@
 .line{
     width:35px; height:3px;
     border-color:#ffffff !important;
+  }
+
+  .espacio{
+    padding-top: 0px;
+}
+
+.flecha{
+    width:111px; 
+    height:29px;
+}
+
+.imag{
+    width: 40%;
+}
+
+  @media (max-width: 780px) {
+
+    .imag{
+        width: 65%;
+    }
+    .espacio{
+        padding-top: 20px;
+    }
+    .activ{
+
+        background: linear-gradient(to bottom,  rgba(19, 23, 34, 0),rgba(21, 80, 133, 1));
+        padding-top: 3%;
+        padding-bottom: 2%;
+        font-size: 12px;
+    }
+    
+    .inactive{
+        background: none;
+        padding-top: 3%;
+        padding-bottom: 2%;
+        font-size: 12px;
+    }
+    
+    .line{
+        width:35px; height:3px;
+        border-color:#ffffff !important;
+      }
+
+      .flecha{
+        width:55px; 
+        height:15px;
+    }
+
+    .carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-control-prev {
+  top: 20%; /* Ajusta esta propiedad para cambiar la posición horizontal de la flecha previa */
+ 
+}
+
+.carousel-control-next {
+  top: 20%; /* Ajusta esta propiedad para cambiar la posición horizontal de la flecha siguiente */
+}
   }
