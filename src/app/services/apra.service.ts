@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ApraService {
 
-  baseURL: string ='https://flowkai.pythonanywhere.com';
+  baseURL: string ='http://flowkai.pythonanywhere.com';
   
 
   constructor(private http: HttpClient) { }
