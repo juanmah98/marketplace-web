@@ -99,7 +99,7 @@ export class GraphicTwoComponent implements OnInit {
 
           element.__data__.forEach(element2 => {
            /*METODO PARA TRANSFORMAR LA FECHA DE CADA ELEMENTO*/
-            const fechaString = element2.acceptances //periodo
+            const fechaString = element2.period //periodo
             const fecha = new Date(fechaString);
             const anio = fecha.getFullYear();
             const mes = fecha.getMonth() + 1;
@@ -133,7 +133,7 @@ export class GraphicTwoComponent implements OnInit {
         /*GUARDAMOS TODO LOS VALORES EN UN ARREGLO NUEVO, QUE SERA CON EL QUE LUEGO PASAREMOS AL ARREGLO DEL GRAFICO*/
           this.arregloDatos.push({
             values:uniqueArreglo,
-            text:"element.__data__[0].institution_name", //institute name
+            text:element.__data__[0].institution_name, //institute name
             scales: 'scale-x, scale-y'
           });  
        

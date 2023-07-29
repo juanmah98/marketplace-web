@@ -7,14 +7,13 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApraService {
-
-  baseURL: string ='http://flowkai.pythonanywhere.com';
+  baseURL: string ='https://flowkai.pythonanywhere.com';
   
 
   constructor(private http: HttpClient) { }
 
   getHistorical(): Observable<Historical>{   
-    return this.http.get<Historical>(this.baseURL+'/historical')    
+    return this.http.get<Historical>(this.baseURL+'/apra/historical')    
   }
 
   getMonthly(): Observable<Historical>{   
