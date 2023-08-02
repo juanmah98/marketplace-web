@@ -17,11 +17,22 @@
                     
                     <ul class="nav pt-1">
                        
-                        <li class="nav-item my-2">
-                            <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/coming" >
-                                Products
+                        <li class="nav-item my-2 dropdown ">
+                            
+                            <a href="" data-bs-toggle="dropdown" aria-expanded="false" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "   >
+                                Products <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.59 16.58L13.17 12L8.59 7.41L10 6L16 12L10 18L8.59 16.58Z" fill="white"/>
+                                    </svg>
+                                    
                             </a>
-                        </li>
+                            <ul class="dropdown-menu dropdown-menu-dark">         
+                                <p class="text-center fw-bold pt-1">Market Research</p>                           
+                                <li><a class="dropdown-item" (click)="setState2()" routerLink="/coming">Survey</a></li>
+                                <li><a class="dropdown-item" (click)="setState2()" routerLink="/industry">Product</a></li>
+                               
+                              </ul>
+                             
+                        </li>  
 
                         <li class="nav-item my-2">
                             <a href="" rel="noopener noreferrer" class=" nav-item text-decoration-none  fs-7 p-2 m-1" [ngClass]="state2 == true ? 'isTrue' : 'isFalse' "  (click)="setState2()" routerLink="/coming" >
