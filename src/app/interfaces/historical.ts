@@ -1,42 +1,51 @@
 export interface Historical {
-    depositsFromGeneralGovernment:                                     number;
-    abn:                                                               number;
-    acceptances:                                                       number;
-    acceptancesOfCustomers:                                            number;
-    bondsNotesAndLongTermBorrowings:                                   number;
-    cashAndLiquidAssets:                                               number;
-    certificatesOfDeposit:                                             number;
-    depositsFromCommunityServiceOrganisationsAndNonProfitInstitutions: number;
-    depositsFromFinancialCorporations:                                 number;
-    depositsFromHouseholds:                                            number;
-    depositsFromNonFinancialCorporations:                              number;
-    dueToClearingHousesAndFinancialInstitutions:                       number;
-    grossLoansAndAdvances:                                             number;
-    institutionName:                                                   string;
-    intraGroupLoansAndAdvances:                                        number;
-    investmentSecurities:                                              number;
-    loansToCommunityServiceOrganisationsAndNonProfitInstitutions:      number;
-    loansToFinancialCorporations:                                      number;
-    loansToGeneralGovernment:                                          number;
-    loansToHouseholdsHousingInvestment:                                number;
-    loansToHouseholdsHousingOwnerOccupied:                             number;
-    loansToHouseholdsOther:                                            number;
-    loansToNonFinancialCorporations:                                   number;
-    otherBorrowings:                                                   number;
-    otherDepositAccounts:                                              number;
-    otherInvestments:                                                  number;
-    outstandingPrincipalBalanceOfSecuritisedAssets:                    number;
-    outstandingValueOfAllAssetsThatHaveBeenSecuritised:                null;
-    period:                                                            Period;
-    totalDeposit:                                                      number;
-    totalDeposits:                                                     number;
-    totalGrossLoansAndAdvances:                                        number;
-    totalResidentAssets:                                               number;
-    tradingSecurities:                                                 number;
-    valueOfHousingLoansSecuritised:                                    number;
-    valueOfHousingLoansSecuritisedDuringTheMonth:                      null;
-    id:                                                                number;
-    index:                                                             number;
+    __values__: Values[];
+}
+
+export interface Values {
+    ABN:      number;
+    __data__: Data[];
+}
+
+export interface Data {
+    abn:                                                                         number;
+    acceptances:                                                                 number;
+    acceptances_of_customers:                                                    number;
+    "bonds_notes_and_long-term_borrowings":                                      string;
+    cash_and_liquid_assets:                                                      number;
+    certificates_of_deposit:                                                     number;
+    "deposits_from_community_service_organisations_and_non-profit_institutions": number;
+    deposits_from_financial_corporations:                                        number;
+    deposits_from_general_government:                                            number;
+    deposits_from_households:                                                    number;
+    "deposits_from_non-financial_corporations":                                  number;
+    due_to_clearing_houses_and_financial_institutions:                           number;
+    gross_loans_and_advances:                                                    number;
+    id:                                                                          number;
+    index:                                                                       number;
+    institution_name:                                                            string;
+    "intra-group_loans_and_advances":                                            number;
+    investment_securities:                                                       number;
+    "loans_to_community_service_organisations_and_non-profit_institutions":      number;
+    loans_to_financial_corporations:                                             number;
+    loans_to_general_government:                                                 number;
+    loans_to_households_housing_investment:                                      number;
+    "loans_to_households_housing_owner-occupied":                                number;
+    loans_to_households_other:                                                   number;
+    "loans_to_non-financial_corporations":                                       number;
+    other_borrowings:                                                            number;
+    other_deposit_accounts:                                                      number;
+    other_investments:                                                           number;
+    outstanding_principal_balance_of_securitised_assets:                         number;
+    outstanding_value_of_all_assets_that_have_been_securitised:                  null;
+    period:                                                                      Period;
+    total_deposit:                                                               number;
+    total_deposits:                                                              number;
+    total_gross_loans_and_advances:                                              number;
+    total_resident_assets:                                                       number;
+    trading_securities:                                                          number;
+    value_of_housing_loans_securitised:                                          number;
+    value_of_housing_loans_securitised_during_the_month:                         null;
 }
 
 export enum Period {

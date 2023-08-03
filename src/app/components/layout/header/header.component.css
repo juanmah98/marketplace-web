@@ -67,6 +67,13 @@ div .img-logo{
   transform: rotateY(-180deg);
 }
 
+.sing{
+  border-color: white;
+  border-radius: 10px;
+  border: 1px solid;
+  
+}
+
 /* .bri{
   background-image: url(../../../../assets/img/optimizadas/logonuevardomovil2.gif);
   

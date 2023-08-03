@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Graphic } from '../interfaces/Graphics';
-import { Datos } from '../interfaces/GraphicTwo';
+import { Datos } from '../interfaces/graphicTwo';
 
 interface Countrie {
   name:   string;
@@ -54,7 +54,7 @@ export class GraphicService {
   [ "2007", 7 ],
   [ "2008", 10 ]
       ],
-      text: 'Apple',
+      text: 'Bank of Queensland Limited',
       scales: 'scale-x, scale-y',
     },
     {
@@ -67,7 +67,7 @@ export class GraphicService {
   [ "2007", 17 ],
   [ "2008", 15 ]
       ],
-      text: 'Samsung',
+      text: 'Bank of Sydney Ltd',
       scales: 'scale-x, scale-y',
     },
     
@@ -81,7 +81,7 @@ export class GraphicService {
   [ "2007", 11 ],
   [ "2008", 8 ]
       ],
-      text: 'Xiaomi',
+      text: 'Bank of Taiwan',
       scales: 'scale-x, scale-y',
     },
      {
@@ -90,11 +90,11 @@ export class GraphicService {
   [ "2003", 10 ],
   [ "2004", 15 ],
   [ "2005", 20 ],
-  ["2006", null ],
+  ["2006", 0 ],
   [ "2007", 15 ],
   [ "2008", 5 ]
       ],
-      text: 'Oppo',
+      text: 'Bendigo and Adelaide Bank Limited',
       scales: 'scale-x, scale-y',
     }, 
      
@@ -117,7 +117,7 @@ export class GraphicService {
     },
     {
       values: [
-        [ "2002", 4 ],
+  [ "2002", 4 ],
   [ "2003", 20 ],
   [ "2004", 27 ],
   [ "2005", 24 ],

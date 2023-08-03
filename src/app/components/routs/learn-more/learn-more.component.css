@@ -134,3 +134,28 @@ body{
     -webkit-animation-direction: normal, alternate;
     animation-direction: normal, alternate;
   }
+
+  .img{
+    width: 100%;
+  }
+
+  @media (max-width: 575px) {
+    .img{
+        width: 50%;
+      }
+
+      .w-response{
+        height: auto;
+    }
+
+    .fs-5{
+        font-size: 9px !important;
+    }
+
+    .hrflow{
+        position: absolute;
+        margin-top: 0px;
+        width:30px; 
+        margin-left: 14px;
+     }
+  }

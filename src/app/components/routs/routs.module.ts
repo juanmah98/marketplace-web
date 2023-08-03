@@ -15,6 +15,10 @@ import { ZingchartAngularModule } from 'zingchart-angular';
 import { GraphicTwoComponent } from './graphic-two/graphic-two.component';
 import { IndustryComponent } from './industry/industry.component';
 import { LearnMoreComponent } from './learn-more/learn-more.component';
+import { ResercherComponent } from './resercher/resercher.component';
+import { UsersComponent } from './users/users.component';
+import { DataMarketComponent } from './data-market/data-market.component';
+import { FormContactComponent } from './form-contact/form-contact.component';
 
 
 
@@ -28,7 +32,11 @@ import { LearnMoreComponent } from './learn-more/learn-more.component';
     TeamComponent,
     GraphicTwoComponent,
     IndustryComponent,
-    LearnMoreComponent
+    LearnMoreComponent,
+    ResercherComponent,
+    UsersComponent,
+    DataMarketComponent,
+    FormContactComponent
   ],
   exports:[
     AnswersComponent
