@@ -80,12 +80,7 @@
 
 .bg-home1{
     background: linear-gradient(to bottom, rgb(37, 43, 66), rgb(12, 14, 21));
-    /* background-image:   url("../../../../assets/Imagenes/Fondos/principal.PNG"); */
-    /* background-image: url("../img/fodno4.jpg"); */
- 
     width: 100%;
-   
-    
 }
 
 
@@ -394,11 +389,7 @@
 
 
 
-/**
- * ----------------------------------------
- * animation text-focus-in
- * ----------------------------------------
- */
+
 @-webkit-keyframes text-focus-in {
   0% {
     -webkit-filter: blur(12px);
