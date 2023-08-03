@@ -18,6 +18,7 @@ import { LearnMoreComponent } from './learn-more/learn-more.component';
 import { ResercherComponent } from './resercher/resercher.component';
 import { UsersComponent } from './users/users.component';
 import { DataMarketComponent } from './data-market/data-market.component';
+import { FormContactComponent } from './form-contact/form-contact.component';
 
 
 
@@ -34,7 +35,8 @@ import { DataMarketComponent } from './data-market/data-market.component';
     LearnMoreComponent,
     ResercherComponent,
     UsersComponent,
-    DataMarketComponent
+    DataMarketComponent,
+    FormContactComponent
   ],
   exports:[
     AnswersComponent
