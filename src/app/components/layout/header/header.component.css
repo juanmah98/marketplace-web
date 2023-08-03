@@ -1,8 +1,3 @@
-/* .bg-movido{
-  background-image: url("../../../../assets/Imagenes/Fondos/giphy.gif");
-    background-size:auto;
-    background-position: center;
-} */
 
 .bg-header{
   background-color: #1c2031;
@@ -74,24 +69,6 @@ div .img-logo{
   
 }
 
-/* .bri{
-  background-image: url(../../../../assets/img/optimizadas/logonuevardomovil2.gif);
-  
-  background-position: center;
-  background-repeat: no-repeat;
-  
-  
- 
-}
-
-.bg-movil{
-  background-image: url(../../../../assets/img/optimizadas/fondomovido.gif);
-  background-size: cover;
- 
-  background-position: center;
- 
- 
-} */
 
 .isFalse{
   color: var(--header-inactive);
