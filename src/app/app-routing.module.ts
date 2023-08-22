@@ -23,7 +23,7 @@ const routes: Routes = [
   {path: 'graphic2', component: GraphicTwoComponent},  
   {path: 'industry', component: IndustryComponent},  
   {path: 'learn-more', component: LearnMoreComponent},  
-  {path: 'witelist', component: FormWitelistComponent}, 
+  {path: 'waitlist', component: FormWitelistComponent}, 
 
 ];
 
