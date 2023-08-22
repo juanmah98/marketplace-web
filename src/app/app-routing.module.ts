@@ -9,6 +9,7 @@ import { IndustryComponent } from './components/routs/industry/industry.componen
 import { LearnMoreComponent } from './components/routs/learn-more/learn-more.component';
 import { LoginComponent } from './components/routs/login/login.component';
 import { TeamComponent } from './components/routs/team/team.component';
+import { FormWitelistComponent } from './components/routs/form-witelist/form-witelist.component';
 
 const routes: Routes = [
 
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'graphic2', component: GraphicTwoComponent},  
   {path: 'industry', component: IndustryComponent},  
   {path: 'learn-more', component: LearnMoreComponent},  
+  {path: 'witelist', component: FormWitelistComponent}, 
 
 ];
 

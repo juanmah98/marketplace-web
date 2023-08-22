@@ -19,6 +19,7 @@ import { ResercherComponent } from './resercher/resercher.component';
 import { UsersComponent } from './users/users.component';
 import { DataMarketComponent } from './data-market/data-market.component';
 import { FormContactComponent } from './form-contact/form-contact.component';
+import { FormWitelistComponent } from './form-witelist/form-witelist.component';
 
 
 
@@ -36,7 +37,7 @@ import { FormContactComponent } from './form-contact/form-contact.component';
     ResercherComponent,
     UsersComponent,
     DataMarketComponent,
-    FormContactComponent
+    FormContactComponent,
   ],
   exports:[
     AnswersComponent

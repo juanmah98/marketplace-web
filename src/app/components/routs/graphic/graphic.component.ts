@@ -154,9 +154,9 @@ export class GraphicComponent implements OnInit {
     return tam;
   }
 
- get multi(){
+/*  get multi(){
   return this.graphicServices.countriesData
- }
+ } */
 
 /*  get multi2(){
   return this.graphicServices.countriesData2
@@ -186,7 +186,7 @@ export class GraphicComponent implements OnInit {
   switch(this.drop) { 
     case "1": { 
       this.titel = 'Graphic 1'
-      return this.multi 
+     /*  return this.multi  */
        break; 
     } 
    /*  case "2": { 
@@ -199,10 +199,10 @@ export class GraphicComponent implements OnInit {
       return this.multi3
       break; 
    }  */
-    default: { 
+    /* default: { 
       return this.multi 
        break; 
-    } 
+    }  */
  } 
 
   
@@ -221,7 +221,7 @@ export class GraphicComponent implements OnInit {
      this.date = data.name; 
      this.name = data.series;
     console.log(this.name)
-    console.log(this.multi[0].series[0].name)
+    /* console.log(this.multi[0].series[0].name) */
   }
   
 

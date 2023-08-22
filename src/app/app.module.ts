@@ -10,10 +10,13 @@ import { RoutsModule } from './components/routs/routs.module';
 import { SharedModule } from './components/shared/shared.module';
 import { LineChartModule, NgxChartsModule} from '@swimlane/ngx-charts';
 import { ZingchartAngularModule } from 'zingchart-angular';
+import { FormWitelistComponent } from './components/routs/form-witelist/form-witelist.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FormWitelistComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,8 @@ import { ZingchartAngularModule } from 'zingchart-angular';
     NgxChartsModule,
     LineChartModule,
     BrowserAnimationsModule,
-    ZingchartAngularModule
+    ZingchartAngularModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

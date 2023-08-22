@@ -1,0 +1,40 @@
+<body  class="row justify-content-center container-fluid">
+    <div  class="col-12 text-center d-flex align-items-center justify-content-center">
+        <img  src="../../../../assets/Imagenes/Extras/graphSoon.png" width="10%" alt="" class="m-2">
+        <h2  class="m-2">Whitelist</h2>
+    </div>
+    <div class="col-sm-6 col-12 text-center text-md-end">
+        <form (ngSumbit)="onSumbit()" [formGroup]="registerForm">
+            <div  class="row">
+                <div  class="col-sm-6 col-12">
+                <div  class="pt-0">
+                    <input  formControlName="firstname" type="text" placeholder="First name" class="rounded shadow px-3  " style="border: none;">
+                </div>
+                <div  class="pt-2 justify-content-center">
+                    <input  formControlName="lastname" type="text" placeholder="Last name" class="rounded shadow px-3  " style="border: none;">
+                </div>
+                <div  class="pt-2 justify-content-center">
+                    <input  formControlName="job_title" type="text" placeholder="Job title" class="rounded shadow px-3  " style="border: none;">
+                </div>
+                <div  class="pt-2 justify-content-center">
+                    <input  formControlName="company_name" type="text" placeholder="Company name" class="rounded shadow px-3  " style="border: none;">
+                </div>
+            </div>
+            <div  class="col-sm-6 col-12 text-center text-md-start">
+                <div  class="pt-2 justify-content-center">
+                    <input  formControlName="business_email" type="email" placeholder="Business email" class="rounded shadow px-3  " style="border: none;">
+                </div>
+                <div  class="pt-2 justify-content-center">
+                    <input  formControlName="phone" type="number" placeholder="Phone" class="rounded shadow px-3  " style="border: none;">
+                </div>
+                <div  class="pt-2 justify-content-center">
+                    <input  formControlName="country" type="text" placeholder="Country" class="rounded shadow px-3  " style="border: none;">
+                </div>
+            </div>
+        </div>
+        <div  class="pt-4 text-center pb-4 mt-2">
+            <button  class="btn btn-primary px-4 mx-1" (click)="onSumbit()">Submit</button>
+        </div>
+    </form>
+</div>
+</body>
